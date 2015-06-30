@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "SOCArrayExtension.h"
 
 @interface SigmaticOCTests : XCTestCase
 
@@ -27,6 +28,8 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
+    NSArray *sample = @[@1, @2, @3];
+    [sample reverseArray];
     XCTAssert(YES, @"Pass");
 }
 

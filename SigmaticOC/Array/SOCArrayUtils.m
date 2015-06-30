@@ -20,4 +20,8 @@
     return array.count > 0;
 }
 
++ (BOOL)isNotEmpty:(NSArray *)array {
+    return ![self isEmpty:array];
+}
+
 @end

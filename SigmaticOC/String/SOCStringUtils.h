@@ -5,4 +5,6 @@
 
 + (BOOL)isBlank:(NSString *)aString;
 
++ (BOOL)isNotBlank:(NSString *)aString;
+
 @end

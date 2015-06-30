@@ -22,4 +22,9 @@
     return NO;
 }
 
++ (BOOL)isNotBlank:(NSString *)aString {
+    return ![self isBlank:aString];
+}
+
+
 @end
