@@ -15,7 +15,7 @@
         return YES;
     } else {
         NSString *trimmed = [aString trim];
-        if ([aString length] == 0) {
+        if ([trimmed length] == 0) {
             return YES;
         }
     }
