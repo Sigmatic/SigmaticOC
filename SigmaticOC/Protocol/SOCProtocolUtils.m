@@ -10,8 +10,8 @@
 
     NSMutableArray *conformingClasses = [NSMutableArray new];
     numClasses = objc_getClassList(NULL, 0);
-    if (numClasses > 0 ) {
-        classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numClasses);
+    if (numClasses > 0) {
+        classes = (__unsafe_unretained Class *) malloc(sizeof(Class) * numClasses);
         numClasses = objc_getClassList(classes, numClasses);
         for (int index = 0; index < numClasses; index++) {
             Class nextClass = classes[index];

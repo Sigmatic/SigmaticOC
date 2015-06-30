@@ -2,5 +2,7 @@
 
 
 @interface SOCStringUtils : NSObject
+
 + (BOOL)isBlank:(NSString *)aString;
+
 @end

@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSArray(SOCExtension)
+@interface NSArray (SOCExtension)
 
 //Objects that are KindOfClass
 - (NSArray *)objectsWithClass:(Class)aClass;

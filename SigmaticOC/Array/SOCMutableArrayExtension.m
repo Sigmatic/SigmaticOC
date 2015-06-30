@@ -1,6 +1,6 @@
 #import "SOCMutableArrayExtension.h"
 
-@implementation NSMutableArray(SOCExtension)
+@implementation NSMutableArray (SOCExtension)
 
 - (void)safeAddObject:(id)object {
     if (!object) {

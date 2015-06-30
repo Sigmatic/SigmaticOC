@@ -2,7 +2,7 @@
 #import "SOCIntegerUtils.h"
 
 
-@implementation NSArray(SOCExtension)
+@implementation NSArray (SOCExtension)
 
 - (NSArray *)objectsWithClass:(Class)aClass {
     NSMutableArray *results = [NSMutableArray new];

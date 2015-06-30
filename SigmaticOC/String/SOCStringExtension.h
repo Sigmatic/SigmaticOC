@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface NSString(SOCExtension)
+@interface NSString (SOCExtension)
 
 - (NSURL *)toURL;
 
