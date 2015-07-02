@@ -15,5 +15,6 @@
 
 - (NSInteger)countObjectsWithClass:(Class)class;
 
-- (NSArray *)reverseArray;
+- (instancetype *)reverseArray;
+
 @end

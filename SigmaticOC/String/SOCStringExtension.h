@@ -16,4 +16,6 @@
 
 + (NSString *)UUIDString;
 
+- (BOOL)isEqualToStringIgnoreCase:(NSString *)otherString;
+
 @end

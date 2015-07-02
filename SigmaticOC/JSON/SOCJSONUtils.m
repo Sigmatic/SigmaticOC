@@ -3,7 +3,7 @@
 
 @implementation SOCJSONUtils
 
-+ (NSString *)objectToJSONString:(id)object {
++ (NSString *)objectToJSON:(id)object {
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:object
                                                        options:0

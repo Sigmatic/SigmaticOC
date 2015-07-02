@@ -4,11 +4,13 @@
 
 @implementation NSDictionary (SOCJSON)
 
-+ (instancetype)fromJSONString:(NSString *)json {
++ (instancetype)fromJSON:(NSString *)json {
+    //TODO: check that the result is actually a dictionary!
     return [SOCJSONUtils jsonToObject:json options:[self jsonOptionForMutability]];
 }
 
-+ (instancetype)safeFromJSONString:(NSString *)json {
++ (instancetype)safeFromJSON:(NSString *)json {
+    //TODO: check that the result is actually a dictionary!
     @try {
         return [SOCJSONUtils jsonToObject:json options:[self jsonOptionForMutability]];
     } @catch (NSException *exception) {
@@ -16,13 +18,13 @@
     }
 }
 
-- (NSString *)toJSONString {
-    return [SOCJSONUtils objectToJSONString:self];
+- (NSString *)toJSON {
+    return [SOCJSONUtils objectToJSON:self];
 }
 
-- (NSString *)safeToJSONString {
+- (NSString *)safeToJSON {
     @try {
-        return [SOCJSONUtils objectToJSONString:self];
+        return [SOCJSONUtils objectToJSON:self];
     } @catch (NSException *exception) {
         return nil;
     }
@@ -36,7 +38,7 @@
 }
 
 + (BOOL)isMutable {
-    return [[self class] isKindOfClass:[NSMutableArray class]];
+    return [[self class] isKindOfClass:[NSMutableDictionary class]];
 }
 
 @end

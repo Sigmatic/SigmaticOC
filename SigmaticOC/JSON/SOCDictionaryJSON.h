@@ -3,12 +3,12 @@
 
 @interface NSDictionary (SOCJSON)
 
-+ (instancetype)fromJSONString:(NSString *)json;
++ (instancetype)fromJSON:(NSString *)json;
 
-+ (instancetype)safeFromJSONString:(NSString *)json;
++ (instancetype)safeFromJSON:(NSString *)json;
 
-- (NSString *)toJSONString;
+- (NSString *)toJSON;
 
-- (NSString *)safeToJSONString;
+- (NSString *)safeToJSON;
 
 @end

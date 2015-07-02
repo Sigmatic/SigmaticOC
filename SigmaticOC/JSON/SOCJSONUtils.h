@@ -3,9 +3,10 @@
 
 @interface SOCJSONUtils : NSObject
 
-+ (NSString *)objectToJSONString:(id)object;
++ (NSString *)objectToJSON:(id)object;
 
 + (id)jsonToObject:(NSString *)json;
 
 + (id)jsonToObject:(NSString *)json options:(NSJSONReadingOptions)options;
+
 @end

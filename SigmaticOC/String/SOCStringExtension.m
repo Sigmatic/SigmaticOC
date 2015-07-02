@@ -65,4 +65,10 @@
     return [[NSUUID UUID] UUIDString];
 }
 
+- (BOOL)isEqualToStringIgnoreCase:(NSString *)other {
+    NSString *lowerSelf = [self lowercaseString];
+    NSString *lowerOther = [other lowercaseString];
+    return [lowerSelf isEqualToString:lowerOther];
+}
+
 @end
