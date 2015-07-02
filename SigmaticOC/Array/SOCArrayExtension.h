@@ -6,15 +6,13 @@
 //Objects that are KindOfClass
 - (NSArray *)objectsWithClass:(Class)aClass;
 
-//Objects that have the exact same class
-- (NSArray *)strictObjectsWithClass:(Class)aClass;
-
+//Sort using a reference array (7,2,8, sorted using 1,2,3,4,5,6,7,8 returns 2,7,8)
 - (NSArray *)sortUsingIndicesArray:(NSArray *)indexArray;
 
+//Unique objects in an array. Using the [NSArray containsObject:] to test uniqueness
 - (NSArray *)uniqueObjects;
 
-- (NSInteger)countObjectsWithClass:(Class)class;
-
+//Reversed array 1,2,3 return 3,2,1
 - (instancetype)reverseArray;
 
 @end

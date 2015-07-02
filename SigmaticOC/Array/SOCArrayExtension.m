@@ -14,16 +14,6 @@
     return [results copy];
 }
 
-- (NSArray *)strictObjectsWithClass:(Class)aClass {
-    NSMutableArray *results = [NSMutableArray new];
-    for (id object in self) {
-        if ([object class] == aClass) {
-            [results addObject:object];
-        }
-    }
-    return [results copy];
-}
-
 - (NSArray *)sortUsingIndicesArray:(NSArray *)indexArray {
     NSArray *sortedArray = [self sortedArrayUsingComparator:^NSComparisonResult(id class1, id class2) {
         NSUInteger index1 = [indexArray indexOfObject:class1];
@@ -41,10 +31,6 @@
         }
     }
     return [uniqueItems copy];
-}
-
-- (NSInteger)countObjectsWithClass:(Class)class {
-    return [[self objectsWithClass:class] count];
 }
 
 - (instancetype)reverseArray {
