@@ -47,7 +47,7 @@
     return [[self objectsWithClass:class] count];
 }
 
-- (instancetype *)reverseArray {
+- (instancetype)reverseArray {
     NSMutableArray *reversedArray = [NSMutableArray arrayWithCapacity:self.count];
     for (id element in [self reverseObjectEnumerator]) {
         [reversedArray addObject:element];
