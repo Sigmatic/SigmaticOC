@@ -24,7 +24,7 @@ Or if you are only interested in a subspec, use
 <br />
 ```ruby
 pod "SigmaticOC/<Subspec>"
-//example
+#example
 pod "SigmaticOC/JSON"
 ```
 ##### Available Subspecs
