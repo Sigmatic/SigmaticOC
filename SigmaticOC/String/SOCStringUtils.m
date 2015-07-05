@@ -26,5 +26,12 @@
     return ![self isBlank:aString];
 }
 
++ (BOOL)string:(NSString *)first equals:(NSString *)second {
+    if (first == nil && second == nil) {
+        return YES;
+    }
+    return [first isEqualToString:second];
+}
+
 
 @end
