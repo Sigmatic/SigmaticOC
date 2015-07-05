@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77579AE23214291E7CD1B35 /* SOCStringExtension.m */; };
 		B775709128E822DD70A65B19 /* SOCProtocolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */; };
+		B775727900D953451E113F00 /* SOCBoolSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B77577E3F5CD38B6CA4A5E6D /* SOCBoolSet.m */; };
 		B775743E17D26861F9DA4FB4 /* SOCStringJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757B9CBD0DA9DA2EB6B65E /* SOCStringJSON.m */; };
 		B77574943166EFCA60B57BD4 /* SOCArrayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757B5830F8EF1E1576A745 /* SOCArrayUtils.m */; };
 		B775757F79363AFF32ACBE65 /* SOCMutableDictionaryExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757D03B69B9C34BD4F7813 /* SOCMutableDictionaryExtension.m */; };
@@ -57,6 +58,7 @@
 		B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolUtils.m; sourceTree = "<group>"; };
 		B77576A40B26A2A02ECB5313 /* SOCArrayJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayJSON.h; sourceTree = "<group>"; };
 		B77577691A890126CC1012E9 /* SOCIntegerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCIntegerUtils.h; sourceTree = "<group>"; };
+		B77577E3F5CD38B6CA4A5E6D /* SOCBoolSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolSet.m; sourceTree = "<group>"; };
 		B7757847AC6AC40774C36773 /* SOCDictionaryJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDictionaryJSON.m; sourceTree = "<group>"; };
 		B77578671D1EDD0D36300509 /* SOCMutableArrayExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableArrayExtensionTests.m; sourceTree = "<group>"; };
 		B77578CDAEB0E616874252C3 /* SOCStringJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringJSON.h; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		B7757D03B69B9C34BD4F7813 /* SOCMutableDictionaryExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableDictionaryExtension.m; sourceTree = "<group>"; };
 		B7757D1FA3D5F4DC23D5F9DD /* SOCStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringExtension.h; sourceTree = "<group>"; };
 		B7757D856D5EACF8F9EE21DD /* SOCArrayExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayExtensionTests.m; sourceTree = "<group>"; };
+		B7757DCB3874D206B19CC38C /* SOCBoolSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCBoolSet.h; sourceTree = "<group>"; };
 		B7757E43510B8B02D3FB9E3B /* SOCStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringUtils.h; sourceTree = "<group>"; };
 		B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProtocolUtils.m; sourceTree = "<group>"; };
 		B7757EE22BB404465265C22E /* SOCArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayExtension.m; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 			children = (
 				B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */,
 				B77570440C3125FDC5B5C34F /* SOCBoolUtils.h */,
+				B77577E3F5CD38B6CA4A5E6D /* SOCBoolSet.m */,
+				B7757DCB3874D206B19CC38C /* SOCBoolSet.h */,
 			);
 			path = Bool;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				B7757EC3B46BDBFADF4D48B4 /* SOCArrayExtensionTests.m in Sources */,
 				B7757FE090DB1791B760207B /* SOCArrayUtilsTests.m in Sources */,
 				B77578A1E5244D9966F44958 /* SOCMutableArrayExtensionTests.m in Sources */,
+				B775727900D953451E113F00 /* SOCBoolSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

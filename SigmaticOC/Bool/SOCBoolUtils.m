@@ -1,23 +1,24 @@
 #import "SOCBoolUtils.h"
 #import "SOCStringExtension.h"
+#import "SOCBoolSet.h"
 
 
 @implementation SOCBoolUtils
 
 + (BOOL)fromYesNo:(NSString *)yesNo {
-    return [@"Yes" isEqualToStringIgnoreCase:yesNo];
+    return [[SOCBoolSet yesNoSet] isTrue:yesNo];
 }
 
 + (BOOL)fromYN:(NSString *)yN {
-    return [@"Y" isEqualToStringIgnoreCase:yN];
+    return [[SOCBoolSet yNSet] isTrue:yN];
 }
 
 + (BOOL)fromTrueFalse:(NSString *)trueFalse {
-    return [@"True" isEqualToStringIgnoreCase:trueFalse];
+    return [[SOCBoolSet trueFalseSet] isTrue:trueFalse];
 }
 
 + (BOOL)fromZeroOne:(NSString *)zeroOne {
-    return [@"1" isEqualToStringIgnoreCase:zeroOne];
+    return [[SOCBoolSet zeroOneSet] isTrue:zeroOne];
 }
 
 @end
