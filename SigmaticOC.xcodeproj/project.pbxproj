@@ -58,6 +58,7 @@
 		B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolUtils.m; sourceTree = "<group>"; };
 		B77576A40B26A2A02ECB5313 /* SOCArrayJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayJSON.h; sourceTree = "<group>"; };
 		B77577691A890126CC1012E9 /* SOCIntegerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCIntegerUtils.h; sourceTree = "<group>"; };
+		B775779B6EBF615A461F0916 /* SigmaticOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigmaticOC.h; sourceTree = "<group>"; };
 		B77577E3F5CD38B6CA4A5E6D /* SOCBoolSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolSet.m; sourceTree = "<group>"; };
 		B7757847AC6AC40774C36773 /* SOCDictionaryJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDictionaryJSON.m; sourceTree = "<group>"; };
 		B77578671D1EDD0D36300509 /* SOCMutableArrayExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableArrayExtensionTests.m; sourceTree = "<group>"; };
@@ -242,6 +243,7 @@
 				B77575184B56503E5D7974E8 /* Protocol */,
 				B77579A67646D54CE58E1820 /* Bool */,
 				B775789295E78BE38EB05E88 /* JSON */,
+				B775779B6EBF615A461F0916 /* SigmaticOC.h */,
 			);
 			path = SigmaticOC;
 			sourceTree = "<group>";
