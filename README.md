@@ -11,7 +11,7 @@
 
 ## Overview
 
-//TODO:
+Buttersmooth Objective-C for the Brave. Simple utils and extensions.
 
 ## Installation
 
@@ -37,3 +37,9 @@ pod "SigmaticOC/JSON"
 - Protocol
 - String
 
+
+## Documentation
+There will be more documentation in the coming days
+
+## Contribution
+Can't say no to that!
