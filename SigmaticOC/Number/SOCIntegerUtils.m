@@ -5,7 +5,7 @@
 
 + (NSUInteger)integerFromHexString:(NSString *)hexString {
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
-    NSUInteger value;
+    unsigned int value = 0;
     [scanner scanHexInt:&value];
     return value;
 }
