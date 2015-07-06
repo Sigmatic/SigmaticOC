@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SigmaticOC'
-  s.version  = '1.0.2'
+  s.version  = '1.0.0'
   s.license  = 'MIT'
   s.summary  = 'Objective C Extensions and Utilities'
   s.homepage = 'https://github.com/Sigmatic/SigmaticOC'
@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Bool' do |ss|
+    ss.dependency 'SigmaticOC/String'
     ss.source_files = 'SigmaticOC/Bool/*.{h,m}'
   end
 
