@@ -34,4 +34,12 @@
     return [self.falseString isEqualToStringIgnoreCase:string];
 }
 
+- (NSString *)describe:(BOOL)truthBool {
+    if (truthBool) {
+        return self.trueString;
+    }
+    return self.falseString;
+}
+
+
 @end

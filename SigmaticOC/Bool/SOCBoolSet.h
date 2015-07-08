@@ -20,4 +20,6 @@
 
 - (BOOL)isFalse:(NSString *)string;
 
+- (NSString *)describe:(BOOL)truthBool;
+
 @end
