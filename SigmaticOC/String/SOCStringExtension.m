@@ -3,6 +3,10 @@
 
 @implementation NSString (SOCExtension)
 
+- (NSString *)trim {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 - (NSURL *)toURL {
     return [[NSURL alloc] initWithString:self];
 }
@@ -46,10 +50,6 @@
 
 - (NSString *)toBase64String {
     return [[NSString alloc] initWithData:[self toBase64] encoding:NSASCIIStringEncoding];
-}
-
-- (NSString *)trim {
-    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 - (NSString *)decodeBase64 {

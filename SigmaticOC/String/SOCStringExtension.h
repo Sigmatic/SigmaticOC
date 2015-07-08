@@ -2,13 +2,15 @@
 
 @interface NSString (SOCExtension)
 
+- (NSString *)trim;
+
 - (NSURL *)toURL;
 
 - (NSString *)urlEncodedWithEncoding:(NSStringEncoding)encoding;
 
 - (NSData *)toBase64;
 
-- (NSString *)trim;
+- (NSString *)toBase64String;
 
 - (NSString *)decodeBase64;
 
