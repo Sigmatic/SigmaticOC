@@ -37,6 +37,19 @@ pod "SigmaticOC/JSON"
 - Protocol
 - String
 
+###### Array
+
+Method                              | Description
+------------------------------------|-----------------
+`-[NSArray objectsWithClass:]`      | All objects that are kind of class 
+`-[NSArray sortUsingIndicesArray]`  | Sort using a reference array (7,2,8, sorted using 1,2,3,4,5,6,7,8 returns 2,7,8)
+`-[NSArray uniqueObjects]`          | Unique objects in an array. Using the [NSArray containsObject:] to test uniqueness
+`-[NSArray reverseArray]`           | Reversed array 1,2,3 return 3,2,1 
+`-[NSArray randomObject]`           | Any random object
+`-[NSArray isMutable]`              | Is of type NSMutableArray
+
+Yo
+
 
 ## Documentation
 There will be more documentation in the coming days

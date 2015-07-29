@@ -3,6 +3,38 @@
 
 @implementation NSString (SOCExtension)
 
++ (NSString *)UUIDString {
+    return [[NSUUID UUID] UUIDString];
+}
+
+- (NSString *)leftPadWith:(NSString *)padding toLength:(NSUInteger)finalLength {
+    if ([self length] >= finalLength) {
+        return self;
+    }
+    NSUInteger remainingLength = finalLength - [self length];
+    NSString *finalPadding = [self repeat:padding untilLengthIs:remainingLength];
+    return [NSString stringWithFormat:@"%@%@", finalPadding, self];
+}
+
+- (NSString *)rightPadWith:(NSString *)padding toLength:(NSUInteger)finalLength {
+    if ([self length] >= finalLength) {
+        return self;
+    }
+    NSUInteger remainingLength = finalLength - [self length];
+    NSString *finalPadding = [self repeat:padding untilLengthIs:remainingLength];
+    return [NSString stringWithFormat:@"%@%@", self, finalPadding];
+}
+
+- (NSString *)repeat:(NSString *)string untilLengthIs:(NSUInteger)finalLength {
+    while(string.length != finalLength) {
+        string = [string stringByAppendingString:string];
+        if (string.length > finalLength) {
+            string = [string substringWithRange:NSMakeRange(0, finalLength)];
+        }
+    }
+    return string;
+}
+
 - (NSString *)trim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
@@ -61,14 +93,33 @@
     return [self rangeOfString:substring].location != NSNotFound;
 }
 
-+ (NSString *)UUIDString {
-    return [[NSUUID UUID] UUIDString];
+- (BOOL)containsIgnoreCase:(NSString *)substring {
+    NSString *lower = [self lowercaseString];
+    NSString *otherLower = [substring lowercaseString];
+    return [lower contains:otherLower];
+}
+
+- (BOOL)equals:(NSString *)otherString {
+    return [self isEqualToString:otherString];
+}
+
+- (BOOL)equalsIgnoreCase:(NSString *)otherString {
+    return [self isEqualToStringIgnoreCase:otherString];
+}
+
+- (NSString *)replace:(NSString *)target with:(NSString *)replacement {
+    return [self stringByReplacingOccurrencesOfString:target withString:replacement];
 }
 
 - (BOOL)isEqualToStringIgnoreCase:(NSString *)other {
     NSString *lowerSelf = [self lowercaseString];
     NSString *lowerOther = [other lowercaseString];
     return [lowerSelf isEqualToString:lowerOther];
+}
+
+- (BOOL)matchesRegex:(NSString *)regex {
+    NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [myTest evaluateWithObject:self];
 }
 
 @end
