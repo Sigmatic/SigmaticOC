@@ -48,7 +48,6 @@ Method                              | Description
 `-[NSArray randomObject]`           | Any random object
 `-[NSArray isMutable]`              | Is of type NSMutableArray
 
-Yo
 
 
 ## Documentation
