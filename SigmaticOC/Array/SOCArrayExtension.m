@@ -41,4 +41,13 @@
     return [self.class arrayWithArray:reversedArray];
 }
 
+- (id)randomObject {
+    NSUInteger randomIndex = arc4random() % [self count];
+    return self[randomIndex];
+}
+
+- (BOOL)isMutable {
+    return [[self class] isKindOfClass:[NSMutableArray class]];
+}
+
 @end

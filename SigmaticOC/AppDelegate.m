@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SOCStringExtension.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSString *some = @"Hello";
+    NSString *left = [some leftPadWith:@"Ann" toLength:12];
+    NSString *right = [some rightPadWith:@"Ann" toLength:10];
+    NSLog(@"We have\n%@\n%@\n", left, right);
     return YES;
 }
 

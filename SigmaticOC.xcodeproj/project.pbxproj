@@ -22,6 +22,7 @@
 		B7757A513E5944DECEED2EEB /* SOCBoolSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B77577E3F5CD38B6CA4A5E6D /* SOCBoolSet.m */; };
 		B7757B2936114C6DF1A6174B /* SOCArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757EE22BB404465265C22E /* SOCArrayExtension.m */; };
 		B7757B341374328E7D7DD5FD /* SOCBoolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */; };
+		B7757CBA6486CD6F999FB450 /* SOCDictionaryExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77570FA0A817F482067CC51 /* SOCDictionaryExtension.m */; };
 		B7757D3799B86A27107A838D /* SOCJSONUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757AAB6E74AFFB273D089D /* SOCJSONUtils.m */; };
 		B7757EC3B46BDBFADF4D48B4 /* SOCArrayExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757D856D5EACF8F9EE21DD /* SOCArrayExtensionTests.m */; };
 		B7757FE090DB1791B760207B /* SOCArrayUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757A8205CF3733CB6A1A3F /* SOCArrayUtilsTests.m */; };
@@ -47,12 +48,14 @@
 		B77570440C3125FDC5B5C34F /* SOCBoolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCBoolUtils.h; sourceTree = "<group>"; };
 		B77570912AA20476BB807BD5 /* SOCStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCStringUtils.m; sourceTree = "<group>"; };
 		B77570D1D81B31AE66116D36 /* SOCDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDateUtils.h; sourceTree = "<group>"; };
+		B77570FA0A817F482067CC51 /* SOCDictionaryExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDictionaryExtension.m; sourceTree = "<group>"; };
 		B77570FD2D672A56227CC66F /* SOCMutableArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMutableArrayExtension.h; sourceTree = "<group>"; };
 		B7757142EC050B2120420C91 /* SOCMutableDictionaryExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMutableDictionaryExtension.h; sourceTree = "<group>"; };
 		B77571C891126B31B1C19131 /* SOCArrayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayUtils.h; sourceTree = "<group>"; };
 		B7757202D22E0CEBC9521E2C /* SOCProtocolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProtocolUtils.h; sourceTree = "<group>"; };
 		B77572201F23043CBA35EA76 /* SOCArrayJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayJSON.m; sourceTree = "<group>"; };
 		B775725B9AB79AD4202D7DAA /* SOCJSONUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCJSONUtils.h; sourceTree = "<group>"; };
+		B77572C8AC44C5EEAF0CFCF3 /* SOCDictionaryExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDictionaryExtension.h; sourceTree = "<group>"; };
 		B775736CBF761D3A92950D17 /* SOCArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayExtension.h; sourceTree = "<group>"; };
 		B7757464C5D84D050BF17896 /* SOCDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDateUtils.m; sourceTree = "<group>"; };
 		B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolUtils.m; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				B7757D03B69B9C34BD4F7813 /* SOCMutableDictionaryExtension.m */,
 				B7757142EC050B2120420C91 /* SOCMutableDictionaryExtension.h */,
+				B77570FA0A817F482067CC51 /* SOCDictionaryExtension.m */,
+				B77572C8AC44C5EEAF0CFCF3 /* SOCDictionaryExtension.h */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				B77579E4AF1E8E7A2921CFE5 /* SOCArrayJSON.m in Sources */,
 				B7757D3799B86A27107A838D /* SOCJSONUtils.m in Sources */,
 				B7757A513E5944DECEED2EEB /* SOCBoolSet.m in Sources */,
+				B7757CBA6486CD6F999FB450 /* SOCDictionaryExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
