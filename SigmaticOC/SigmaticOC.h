@@ -7,6 +7,7 @@
 
 #import "SOCDateUtils.h"
 
+#import "SOCDictionaryExtension.h"
 #import "SOCMutableDictionaryExtension.h"
 
 #import "SOCArrayJSON.h"
