@@ -10,4 +10,5 @@
 + (BOOL)isEmpty:(NSArray *)array;
 
 + (BOOL)isNotEmpty:(NSArray *)array;
+
 @end
