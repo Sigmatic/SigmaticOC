@@ -1,6 +1,8 @@
 #import "SOCArrayExtension.h"
 #import "SOCArrayUtils.h"
 #import "SOCMutableArrayExtension.h"
+#import "SOCWeakArray.h"
+#import "SOCWeakContainer.h"
 
 #import "SOCBoolSet.h"
 #import "SOCBoolUtils.h"
