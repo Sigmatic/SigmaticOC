@@ -34,7 +34,7 @@ pod "SigmaticOC/JSON"
 - Dictionary
 - JSON
 - Number
-- Protocol
+- Runtime
 - String
 
 
