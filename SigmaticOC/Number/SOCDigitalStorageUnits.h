@@ -17,4 +17,6 @@ typedef NS_ENUM(NSUInteger, SOCStorageUnit) {
 
 + (double)convert:(double)amount from:(SOCStorageUnit)fromUnits to:(SOCStorageUnit)toUnits;
 
++ (NSString *)descriptionForUnit:(SOCStorageUnit)unit;
+
 @end
