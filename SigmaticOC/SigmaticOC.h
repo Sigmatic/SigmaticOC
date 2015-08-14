@@ -17,7 +17,9 @@
 #import "SOCJSONUtils.h"
 #import "SOCStringJSON.h"
 
+#import "SOCDigitalStorageUnits.h"
 #import "SOCIntegerUtils.h"
+#import "SOCNumberMultiples.h"
 
 #import "SOCProtocolUtils.h"
 

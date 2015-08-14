@@ -10,8 +10,10 @@
 		B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77579AE23214291E7CD1B35 /* SOCStringExtension.m */; };
 		B775709128E822DD70A65B19 /* SOCProtocolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */; };
 		B7757248D6B3009933B3B546 /* SOCWeakArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B775783AFB5393B2CC2DB55A /* SOCWeakArray.m */; };
+		B77573D411AE603F02DB9161 /* SOCDigitalStorageUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = B77575322B0F2DCEC1D810C4 /* SOCDigitalStorageUnits.m */; };
 		B775743E17D26861F9DA4FB4 /* SOCStringJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757B9CBD0DA9DA2EB6B65E /* SOCStringJSON.m */; };
 		B77574943166EFCA60B57BD4 /* SOCArrayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757B5830F8EF1E1576A745 /* SOCArrayUtils.m */; };
+		B77574CD9240381277BD0568 /* SOCNumberMultiples.m in Sources */ = {isa = PBXBuildFile; fileRef = B775786F798E987FCD7BA483 /* SOCNumberMultiples.m */; };
 		B775757F79363AFF32ACBE65 /* SOCMutableDictionaryExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757D03B69B9C34BD4F7813 /* SOCMutableDictionaryExtension.m */; };
 		B775771B96BC93AF1B9219F1 /* SOCDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757464C5D84D050BF17896 /* SOCDateUtils.m */; };
 		B77577C3AC659B7896B62DCA /* SOCMutableArrayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757934A23606A0445E8550 /* SOCMutableArrayExtension.m */; };
@@ -58,6 +60,7 @@
 		B77572C8AC44C5EEAF0CFCF3 /* SOCDictionaryExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDictionaryExtension.h; sourceTree = "<group>"; };
 		B775736CBF761D3A92950D17 /* SOCArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayExtension.h; sourceTree = "<group>"; };
 		B7757464C5D84D050BF17896 /* SOCDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDateUtils.m; sourceTree = "<group>"; };
+		B77575322B0F2DCEC1D810C4 /* SOCDigitalStorageUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDigitalStorageUnits.m; sourceTree = "<group>"; };
 		B775754A220B127F77BFD1D5 /* SOCWeakContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCWeakContainer.h; sourceTree = "<group>"; };
 		B77575CEFAAED401C63A35F3 /* SOCBoolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCBoolUtils.m; sourceTree = "<group>"; };
 		B775764235C7BBF0606B1809 /* SOCWeakContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCWeakContainer.m; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		B775783AFB5393B2CC2DB55A /* SOCWeakArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCWeakArray.m; sourceTree = "<group>"; };
 		B7757847AC6AC40774C36773 /* SOCDictionaryJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCDictionaryJSON.m; sourceTree = "<group>"; };
 		B77578671D1EDD0D36300509 /* SOCMutableArrayExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableArrayExtensionTests.m; sourceTree = "<group>"; };
+		B775786F798E987FCD7BA483 /* SOCNumberMultiples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCNumberMultiples.m; sourceTree = "<group>"; };
 		B77578CDAEB0E616874252C3 /* SOCStringJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringJSON.h; sourceTree = "<group>"; };
 		B7757934A23606A0445E8550 /* SOCMutableArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableArrayExtension.m; sourceTree = "<group>"; };
 		B775798071E5CDE4C470488A /* SOCDictionaryJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDictionaryJSON.h; sourceTree = "<group>"; };
@@ -78,10 +82,12 @@
 		B7757B5830F8EF1E1576A745 /* SOCArrayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayUtils.m; sourceTree = "<group>"; };
 		B7757B9CBD0DA9DA2EB6B65E /* SOCStringJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCStringJSON.m; sourceTree = "<group>"; };
 		B7757C7402917D195AC55235 /* SOCWeakArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCWeakArray.h; sourceTree = "<group>"; };
+		B7757CAEBA43729B029FDC08 /* SOCDigitalStorageUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDigitalStorageUnits.h; sourceTree = "<group>"; };
 		B7757D03B69B9C34BD4F7813 /* SOCMutableDictionaryExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMutableDictionaryExtension.m; sourceTree = "<group>"; };
 		B7757D1FA3D5F4DC23D5F9DD /* SOCStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringExtension.h; sourceTree = "<group>"; };
 		B7757D856D5EACF8F9EE21DD /* SOCArrayExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayExtensionTests.m; sourceTree = "<group>"; };
 		B7757DCB3874D206B19CC38C /* SOCBoolSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCBoolSet.h; sourceTree = "<group>"; };
+		B7757DCD84E6722F08738C72 /* SOCNumberMultiples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCNumberMultiples.h; sourceTree = "<group>"; };
 		B7757E43510B8B02D3FB9E3B /* SOCStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringUtils.h; sourceTree = "<group>"; };
 		B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProtocolUtils.m; sourceTree = "<group>"; };
 		B7757EE22BB404465265C22E /* SOCArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayExtension.m; sourceTree = "<group>"; };
@@ -128,17 +134,21 @@
 			children = (
 				B77579D2A680EAB0A827C866 /* SOCIntegerUtils.m */,
 				B77577691A890126CC1012E9 /* SOCIntegerUtils.h */,
+				B775786F798E987FCD7BA483 /* SOCNumberMultiples.m */,
+				B7757DCD84E6722F08738C72 /* SOCNumberMultiples.h */,
+				B77575322B0F2DCEC1D810C4 /* SOCDigitalStorageUnits.m */,
+				B7757CAEBA43729B029FDC08 /* SOCDigitalStorageUnits.h */,
 			);
 			path = Number;
 			sourceTree = "<group>";
 		};
-		B77575184B56503E5D7974E8 /* Protocol */ = {
+		B77575184B56503E5D7974E8 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
 				B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */,
 				B7757202D22E0CEBC9521E2C /* SOCProtocolUtils.h */,
 			);
-			path = Protocol;
+			path = Runtime;
 			sourceTree = "<group>";
 		};
 		B77577E65559757CBB012D1F /* Dictionary */ = {
@@ -247,7 +257,7 @@
 				B77573B7C16A8363A187133C /* Number */,
 				B77572B1922A8F59F55AB26B /* Date */,
 				B77577E65559757CBB012D1F /* Dictionary */,
-				B77575184B56503E5D7974E8 /* Protocol */,
+				B77575184B56503E5D7974E8 /* Runtime */,
 				B77579A67646D54CE58E1820 /* Bool */,
 				B775789295E78BE38EB05E88 /* JSON */,
 				B775779B6EBF615A461F0916 /* SigmaticOC.h */,
@@ -401,6 +411,8 @@
 				B7757CBA6486CD6F999FB450 /* SOCDictionaryExtension.m in Sources */,
 				B7757248D6B3009933B3B546 /* SOCWeakArray.m in Sources */,
 				B7757DCC4B04991367082319 /* SOCWeakContainer.m in Sources */,
+				B77574CD9240381277BD0568 /* SOCNumberMultiples.m in Sources */,
+				B77573D411AE603F02DB9161 /* SOCDigitalStorageUnits.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
       ss.source_files = 'SigmaticOC/Number/*.{h,m}'
   end
 
-  s.subspec 'Protocol' do |ss|
-      ss.source_files = 'SigmaticOC/Protocol/*.{h,m}'
+  s.subspec 'Runtime' do |ss|
+      ss.source_files = 'SigmaticOC/Runtime/*.{h,m}'
   end
 
   s.subspec 'String' do |ss|
