@@ -16,10 +16,11 @@
     if (difference == 0) {
         return amount;
     }
+    double toThePower = pow(multiplier, abs(difference));
     if (difference > 0) {
-        return amount / (difference * multiplier);
+        return amount / toThePower;
     } else {
-        return amount * (abs(difference) * multiplier);
+        return amount * toThePower;
     }
 }
 
