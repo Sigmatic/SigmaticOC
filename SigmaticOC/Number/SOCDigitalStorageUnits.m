@@ -7,6 +7,11 @@
     return [SOCNumberMultiples binaryConvert:amount from:(SOCNumberMultiple) fromUnits to:(SOCNumberMultiple) toUnits];
 }
 
++ (NSString *)humanReadableBytes:(long long)byteCount {
+    NSByteCountFormatter *formatter = [[NSByteCountFormatter alloc] init];
+    return [formatter stringFromByteCount:byteCount];
+}
+
 + (NSString *)descriptionForUnit:(SOCStorageUnit)unit {
     switch (unit) {
         case SOCStorageUnitBytes:
