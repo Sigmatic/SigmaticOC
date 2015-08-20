@@ -8,7 +8,7 @@ const NSUInteger SECONDS_IN_MINUTE = 60;
 const NSUInteger SECONDS_IN_HOUR = 3600;
 const NSUInteger SECONDS_IN_DAY = 86400;
 const NSUInteger SECONDS_IN_WEEK = 604800;
-const NSUInteger SECONDS_IN_YEAR = 31556926;
+const NSUInteger SECONDS_IN_YEAR = 31556940;
 
 @implementation SOCDateUtils
 
