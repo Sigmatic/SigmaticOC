@@ -4,33 +4,43 @@
 
 @implementation NSArray (SOCExtension)
 
-- (NSArray *)objectsWithClass:(Class)aClass {
+- (instancetype)objectsWithClass:(Class)aClass {
     NSMutableArray *results = [NSMutableArray new];
     for (id object in self) {
         if ([object isKindOfClass:aClass]) {
             [results addObject:object];
         }
     }
-    return [results copy];
+    return [self.class arrayWithArray:results];
 }
 
-- (NSArray *)sortUsingIndicesArray:(NSArray *)indexArray {
+- (instancetype)objectsNotWithClass:(Class)aClass {
+    NSMutableArray *results = [NSMutableArray new];
+    for (id object in self) {
+        if (![object isKindOfClass:aClass]) {
+            [results addObject:object];
+        }
+    }
+    return [self.class arrayWithArray:results];
+}
+
+- (instancetype)sortUsingIndicesArray:(NSArray *)indexArray {
     NSArray *sortedArray = [self sortedArrayUsingComparator:^NSComparisonResult(id class1, id class2) {
         NSUInteger index1 = [indexArray indexOfObject:class1];
         NSUInteger index2 = [indexArray indexOfObject:class2];
         return [SOCIntegerUtils compare:index1 with:index2];
     }];
-    return sortedArray;
+    return [self.class arrayWithArray:sortedArray];
 }
 
-- (NSArray *)uniqueObjects {
+- (instancetype)uniqueObjects {
     NSMutableArray *uniqueItems = [[NSMutableArray alloc] init];
     for (id item in self) {
         if (![uniqueItems containsObject:item]) {
             [uniqueItems addObject:item];
         }
     }
-    return [uniqueItems copy];
+    return [self.class arrayWithArray:uniqueItems];
 }
 
 - (instancetype)reverseArray {
