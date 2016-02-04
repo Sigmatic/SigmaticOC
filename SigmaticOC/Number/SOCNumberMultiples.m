@@ -16,7 +16,7 @@
     if (difference == 0) {
         return amount;
     }
-    double toThePower = pow(multiplier, abs(difference));
+    double toThePower = pow(multiplier, labs(difference));
     if (difference > 0) {
         return amount / toThePower;
     } else {

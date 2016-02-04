@@ -1,15 +1,7 @@
-//
-//  AppDelegate.m
-//  SigmaticOC
-//
-//  Created by Hisham on 30/06/2015.
-//  Copyright (c) 2015 Sigmatic. All rights reserved.
-//
-
 #import "AppDelegate.h"
-#import "SOCStringExtension.h"
-#import "SOCNumberMultiples.h"
-#import "SOCProtocolUtils.h"
+#import "SOCSampleObject.h"
+#import "SOCObjectProperties.h"
+#import "SOCProperty.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +12,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    SOCSampleObject *sampleObject = [SOCSampleObject new];
+    NSArray *properties = [SOCObjectProperties getClassProperties:[SOCSampleObject class]];
+    NSArray *parentProperties = [SOCObjectProperties getClassProperties:[SOCSampleParent class]];
+    for (SOCProperty *aProperty in properties) {
+        if (!aProperty.isReadOnly && aProperty.propertyType == SOCPropertyTypeObject) {
+            if (aProperty.objectClass == NSString.class) {
+                [aProperty setValueTo:@"HAHAHAHA" onObject:[NSMutableString new]];
+                NSString *newValue = [aProperty getValueFrom:[NSArray new]];
+                NSLog(@"Value is now: %@", newValue);
+            }
+        }
+    }
+    NSLog(@"Got properties %@, %@, %@", properties, sampleObject, parentProperties);
     return YES;
 }
 

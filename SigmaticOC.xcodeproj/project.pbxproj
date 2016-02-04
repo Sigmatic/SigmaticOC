@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80DA606F319A778198D586D2 /* SOCObjectProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */; };
+		80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA68E2735972185196F350 /* SOCSampleParent.m */; };
+		80DA669112E21605604294EF /* SOCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA644E96E25F8999B397CF /* SOCProperty.m */; };
+		80DA68D88999DEC8121610F6 /* SOCMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */; };
+		80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */; };
 		B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77579AE23214291E7CD1B35 /* SOCStringExtension.m */; };
-		B775709128E822DD70A65B19 /* SOCProtocolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */; };
 		B7757248D6B3009933B3B546 /* SOCWeakArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B775783AFB5393B2CC2DB55A /* SOCWeakArray.m */; };
 		B77573D411AE603F02DB9161 /* SOCDigitalStorageUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = B77575322B0F2DCEC1D810C4 /* SOCDigitalStorageUnits.m */; };
 		B775743E17D26861F9DA4FB4 /* SOCStringJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = B7757B9CBD0DA9DA2EB6B65E /* SOCStringJSON.m */; };
@@ -34,6 +38,7 @@
 		D51FD41B1B42870D00BC5BFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D51FD41A1B42870D00BC5BFA /* AppDelegate.m */; };
 		D51FD4211B42870D00BC5BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51FD41F1B42870D00BC5BFA /* Main.storyboard */; };
 		D51FD4261B42870D00BC5BFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51FD4241B42870D00BC5BFA /* LaunchScreen.xib */; };
+		D567E57E1C64012E00CF3684 /* SOCProtocolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		80DA6088B445F8173CD59D9E /* SOCProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProperty.h; sourceTree = "<group>"; };
+		80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMethodSwizzler.m; sourceTree = "<group>"; };
+		80DA644E96E25F8999B397CF /* SOCProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProperty.m; sourceTree = "<group>"; };
+		80DA64E8BD7CA9BB1B13C57A /* SOCMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMethodSwizzler.h; sourceTree = "<group>"; };
+		80DA671B24B1517DF6C0A193 /* SOCObjectProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCObjectProperties.h; sourceTree = "<group>"; };
+		80DA68E2735972185196F350 /* SOCSampleParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCSampleParent.m; sourceTree = "<group>"; };
+		80DA6A85A0ED741FBF09DE8B /* SOCSampleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCSampleObject.h; sourceTree = "<group>"; };
+		80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCObjectProperties.m; sourceTree = "<group>"; };
+		80DA6C56C72096D312AADC80 /* SOCSampleParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCSampleParent.h; sourceTree = "<group>"; };
+		80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCSampleObject.m; sourceTree = "<group>"; };
 		B77570440C3125FDC5B5C34F /* SOCBoolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCBoolUtils.h; sourceTree = "<group>"; };
 		B77570912AA20476BB807BD5 /* SOCStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCStringUtils.m; sourceTree = "<group>"; };
 		B77570D1D81B31AE66116D36 /* SOCDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDateUtils.h; sourceTree = "<group>"; };
@@ -54,7 +69,6 @@
 		B77570FD2D672A56227CC66F /* SOCMutableArrayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMutableArrayExtension.h; sourceTree = "<group>"; };
 		B7757142EC050B2120420C91 /* SOCMutableDictionaryExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMutableDictionaryExtension.h; sourceTree = "<group>"; };
 		B77571C891126B31B1C19131 /* SOCArrayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCArrayUtils.h; sourceTree = "<group>"; };
-		B7757202D22E0CEBC9521E2C /* SOCProtocolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProtocolUtils.h; sourceTree = "<group>"; };
 		B77572201F23043CBA35EA76 /* SOCArrayJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayJSON.m; sourceTree = "<group>"; };
 		B775725B9AB79AD4202D7DAA /* SOCJSONUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCJSONUtils.h; sourceTree = "<group>"; };
 		B77572C8AC44C5EEAF0CFCF3 /* SOCDictionaryExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCDictionaryExtension.h; sourceTree = "<group>"; };
@@ -89,7 +103,6 @@
 		B7757DCB3874D206B19CC38C /* SOCBoolSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCBoolSet.h; sourceTree = "<group>"; };
 		B7757DCD84E6722F08738C72 /* SOCNumberMultiples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCNumberMultiples.h; sourceTree = "<group>"; };
 		B7757E43510B8B02D3FB9E3B /* SOCStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCStringUtils.h; sourceTree = "<group>"; };
-		B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProtocolUtils.m; sourceTree = "<group>"; };
 		B7757EE22BB404465265C22E /* SOCArrayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCArrayExtension.m; sourceTree = "<group>"; };
 		D51FD4121B42870D00BC5BFA /* SigmaticOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SigmaticOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51FD4161B42870D00BC5BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +113,8 @@
 		D51FD4251B42870D00BC5BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D51FD42B1B42870D00BC5BFA /* SigmaticOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SigmaticOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51FD4301B42870D00BC5BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D567E57C1C64012E00CF3684 /* SOCProtocolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProtocolUtils.h; sourceTree = "<group>"; };
+		D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProtocolUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +135,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80DA626E00FD7DEC4EA07CCF /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D567E57C1C64012E00CF3684 /* SOCProtocolUtils.h */,
+				D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */,
+				80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */,
+				80DA64E8BD7CA9BB1B13C57A /* SOCMethodSwizzler.h */,
+				80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */,
+				80DA671B24B1517DF6C0A193 /* SOCObjectProperties.h */,
+				80DA644E96E25F8999B397CF /* SOCProperty.m */,
+				80DA6088B445F8173CD59D9E /* SOCProperty.h */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
 		B77572B1922A8F59F55AB26B /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,15 +170,6 @@
 				B7757CAEBA43729B029FDC08 /* SOCDigitalStorageUnits.h */,
 			);
 			path = Number;
-			sourceTree = "<group>";
-		};
-		B77575184B56503E5D7974E8 /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-				B7757E7D7A727005CDD09194 /* SOCProtocolUtils.m */,
-				B7757202D22E0CEBC9521E2C /* SOCProtocolUtils.h */,
-			);
-			path = Runtime;
 			sourceTree = "<group>";
 		};
 		B77577E65559757CBB012D1F /* Dictionary */ = {
@@ -257,10 +278,10 @@
 				B77573B7C16A8363A187133C /* Number */,
 				B77572B1922A8F59F55AB26B /* Date */,
 				B77577E65559757CBB012D1F /* Dictionary */,
-				B77575184B56503E5D7974E8 /* Runtime */,
 				B77579A67646D54CE58E1820 /* Bool */,
 				B775789295E78BE38EB05E88 /* JSON */,
 				B775779B6EBF615A461F0916 /* SigmaticOC.h */,
+				80DA626E00FD7DEC4EA07CCF /* Runtime */,
 			);
 			path = SigmaticOC;
 			sourceTree = "<group>";
@@ -270,6 +291,10 @@
 			children = (
 				D51FD4161B42870D00BC5BFA /* Info.plist */,
 				D51FD4171B42870D00BC5BFA /* main.m */,
+				80DA6A85A0ED741FBF09DE8B /* SOCSampleObject.h */,
+				80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */,
+				80DA68E2735972185196F350 /* SOCSampleParent.m */,
+				80DA6C56C72096D312AADC80 /* SOCSampleParent.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -336,7 +361,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SOC;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Sigmatic;
 				TargetAttributes = {
 					D51FD4111B42870D00BC5BFA = {
@@ -400,7 +425,6 @@
 				B775757F79363AFF32ACBE65 /* SOCMutableDictionaryExtension.m in Sources */,
 				B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */,
 				B77579FAD912DDA37C6446E3 /* SOCStringUtils.m in Sources */,
-				B775709128E822DD70A65B19 /* SOCProtocolUtils.m in Sources */,
 				B775771B96BC93AF1B9219F1 /* SOCDateUtils.m in Sources */,
 				B7757B341374328E7D7DD5FD /* SOCBoolUtils.m in Sources */,
 				B775743E17D26861F9DA4FB4 /* SOCStringJSON.m in Sources */,
@@ -413,6 +437,12 @@
 				B7757DCC4B04991367082319 /* SOCWeakContainer.m in Sources */,
 				B77574CD9240381277BD0568 /* SOCNumberMultiples.m in Sources */,
 				B77573D411AE603F02DB9161 /* SOCDigitalStorageUnits.m in Sources */,
+				D567E57E1C64012E00CF3684 /* SOCProtocolUtils.m in Sources */,
+				80DA68D88999DEC8121610F6 /* SOCMethodSwizzler.m in Sources */,
+				80DA606F319A778198D586D2 /* SOCObjectProperties.m in Sources */,
+				80DA669112E21605604294EF /* SOCProperty.m in Sources */,
+				80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */,
+				80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +507,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -547,6 +578,7 @@
 				INFOPLIST_FILE = SigmaticOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.sigmatic.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -558,6 +590,7 @@
 				INFOPLIST_FILE = SigmaticOC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.sigmatic.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -576,6 +609,7 @@
 				);
 				INFOPLIST_FILE = SigmaticOCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.sigmatic.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SigmaticOC.app/SigmaticOC";
 			};
@@ -591,6 +625,7 @@
 				);
 				INFOPLIST_FILE = SigmaticOCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.sigmatic.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SigmaticOC.app/SigmaticOC";
 			};
