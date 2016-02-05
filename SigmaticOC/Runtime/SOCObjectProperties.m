@@ -1,6 +1,7 @@
 #import "SOCObjectProperties.h"
 #import "SOCProperty.h"
 #import "SOCStringExtension.h"
+#import "SOCMutableArrayExtension.h"
 #import <objc/runtime.h>
 
 static NSMutableDictionary *existingClassPropertiesMap;
@@ -96,7 +97,7 @@ static NSDictionary *internalPrimitiveTypesMap;
     while ([scanner scanString:@"<" intoString:NULL]) {
         NSString *protocolName = nil;
         [scanner scanUpToString:@">" intoString:&protocolName];
-        [protocols addObject:NSProtocolFromString(protocolName)];
+        [protocols safeAddObject:NSProtocolFromString(protocolName)];
         [scanner scanString:@">" intoString:NULL];
     }
     return protocols;
