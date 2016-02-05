@@ -11,6 +11,7 @@
 		80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA68E2735972185196F350 /* SOCSampleParent.m */; };
 		80DA669112E21605604294EF /* SOCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA644E96E25F8999B397CF /* SOCProperty.m */; };
 		80DA68D88999DEC8121610F6 /* SOCMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */; };
+		80DA6F677B867C947A3330E1 /* SOCTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA65F033A316130657D75E /* SOCTestController.m */; };
 		80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */; };
 		B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77579AE23214291E7CD1B35 /* SOCStringExtension.m */; };
 		B7757248D6B3009933B3B546 /* SOCWeakArray.m in Sources */ = {isa = PBXBuildFile; fileRef = B775783AFB5393B2CC2DB55A /* SOCWeakArray.m */; };
@@ -53,9 +54,11 @@
 
 /* Begin PBXFileReference section */
 		80DA6088B445F8173CD59D9E /* SOCProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProperty.h; sourceTree = "<group>"; };
+		80DA6110DD4ACB9C76C4020B /* SOCTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCTestController.h; sourceTree = "<group>"; };
 		80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMethodSwizzler.m; sourceTree = "<group>"; };
 		80DA644E96E25F8999B397CF /* SOCProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProperty.m; sourceTree = "<group>"; };
 		80DA64E8BD7CA9BB1B13C57A /* SOCMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMethodSwizzler.h; sourceTree = "<group>"; };
+		80DA65F033A316130657D75E /* SOCTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCTestController.m; sourceTree = "<group>"; };
 		80DA671B24B1517DF6C0A193 /* SOCObjectProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCObjectProperties.h; sourceTree = "<group>"; };
 		80DA68E2735972185196F350 /* SOCSampleParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCSampleParent.m; sourceTree = "<group>"; };
 		80DA6A85A0ED741FBF09DE8B /* SOCSampleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCSampleObject.h; sourceTree = "<group>"; };
@@ -295,6 +298,8 @@
 				80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */,
 				80DA68E2735972185196F350 /* SOCSampleParent.m */,
 				80DA6C56C72096D312AADC80 /* SOCSampleParent.h */,
+				80DA65F033A316130657D75E /* SOCTestController.m */,
+				80DA6110DD4ACB9C76C4020B /* SOCTestController.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				80DA669112E21605604294EF /* SOCProperty.m in Sources */,
 				80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */,
 				80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */,
+				80DA6F677B867C947A3330E1 /* SOCTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

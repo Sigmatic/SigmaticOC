@@ -2,6 +2,7 @@
 #import "SOCSampleObject.h"
 #import "SOCObjectProperties.h"
 #import "SOCProperty.h"
+#import "SOCTestController.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,8 @@
             NSLog(@"Do we have something? %uC", valueNowIs);
         }
     }
-    NSLog(@"Got properties %@, %@, %@", properties, sampleObject, parentProperties);
+    NSArray *viewControllerProp = [SOCObjectProperties getClassProperties:[SOCTestController class]];
+    NSLog(@"Got properties %@, %@, %@, %@", properties, sampleObject, parentProperties, viewControllerProp);
     return YES;
 }
 
