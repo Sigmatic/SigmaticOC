@@ -40,6 +40,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Runtime' do |ss|
+      ss.dependency 'SigmaticOC/String'
+      ss.dependency 'SigmaticOC/Array'
       ss.source_files = 'SigmaticOC/Runtime/*.{h,m}'
   end
 
