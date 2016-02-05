@@ -1,8 +1,4 @@
 #import "AppDelegate.h"
-#import "SOCSampleObject.h"
-#import "SOCObjectProperties.h"
-#import "SOCProperty.h"
-#import "SOCTestController.h"
 
 @interface AppDelegate ()
 
