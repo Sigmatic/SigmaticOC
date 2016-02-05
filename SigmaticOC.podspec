@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SigmaticOC'
-  s.version  = '1.1'
+  s.version  = '1.2'
   s.license  = 'MIT'
   s.summary  = 'Buttersmooth Objective-C for the Brave'
   s.homepage = 'https://github.com/Sigmatic/SigmaticOC'
@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
       ss.source_files = 'SigmaticOC/Number/*.{h,m}'
   end
 
-  s.subspec 'Reflection' do |ss|
-      ss.source_files = 'SigmaticOC/Reflection/*.{h,m}'
+  s.subspec 'Runtime' do |ss|
+      ss.source_files = 'SigmaticOC/Runtime/*.{h,m}'
   end
 
   s.subspec 'String' do |ss|
