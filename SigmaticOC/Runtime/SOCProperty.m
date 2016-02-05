@@ -25,6 +25,7 @@
     SEL setSelector = [self setter];
     if ([object respondsToSelector:setSelector]) {
         ((void (*)(id, SEL, id)) objc_msgSend)(object, setSelector, newValue);
+        return YES;
     }
     return NO;
 }
