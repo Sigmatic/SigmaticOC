@@ -1,6 +1,4 @@
 #import <XCTest/XCTest.h>
-#import "SOCObjectProperties.h"
-#import "SOCTestController.h"
 
 
 @interface SOCObjectPropertiesTests : XCTestCase
@@ -16,7 +14,5 @@
 - (void)tearDown {
     [super tearDown];
 }
-
-
 
 @end
