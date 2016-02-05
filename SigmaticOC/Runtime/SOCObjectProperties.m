@@ -4,6 +4,7 @@
 #import <objc/runtime.h>
 
 static NSMutableDictionary *existingClassPropertiesMap;
+static NSDictionary *internalPrimitiveTypesMap;
 
 @implementation SOCObjectProperties
 
@@ -50,6 +51,7 @@ static NSMutableDictionary *existingClassPropertiesMap;
             newProperty.protocols = [self protocolsFromTypeAttribute:typeAttribute];
         } else if (newProperty.propertyType == SOCPropertyTypeStruct) {
             newProperty.structName = [self structNameFromTypeAttribute:typeAttribute];
+            newProperty.structDefinition = [self structDefinitionsFromTypeAttribute:typeAttribute];
         } else if (newProperty.propertyType == SOCPropertyTypePrimitive) {
             newProperty.primitiveType = [self primitiveTypeFromTypeAttribute:typeAttribute];
         }
@@ -62,7 +64,7 @@ static NSMutableDictionary *existingClassPropertiesMap;
 
 + (SOCPrimitiveType)primitiveTypeFromTypeAttribute:(NSString *)attribute {
     NSString *primitiveTypeChar = [attribute substringFromIndex:1];
-    return (SOCPrimitiveType) [[self primitiveTypesMap][primitiveTypeChar] integerValue];
+    return [self primitiveTypesMapForCharacter:primitiveTypeChar];
 }
 
 + (NSString *)structNameFromTypeAttribute:(NSString *)attribute {
@@ -72,6 +74,19 @@ static NSMutableDictionary *existingClassPropertiesMap;
     [scanner scanCharactersFromSet:[NSCharacterSet alphanumericCharacterSet]
                         intoString:&structName];
     return structName;
+}
+
++ (NSArray *)structDefinitionsFromTypeAttribute:(NSString *)attribute {
+    NSScanner *scanner = [NSScanner scannerWithString:attribute];
+    [scanner scanUpToString:@"=" intoString:NULL];
+    [scanner scanString:@"=" intoString:NULL];
+    NSString *primitivesString = nil;
+    [scanner scanUpToString:@"}" intoString:&primitivesString];
+    NSMutableArray *primitives = [[NSMutableArray alloc] initWithCapacity:primitivesString.length];
+    [primitivesString forEachCharacter:^(NSString *character) {
+        [primitives addObject:@([self primitiveTypesMapForCharacter:character])];
+    }];
+    return primitives;
 }
 
 + (NSArray *)protocolsFromTypeAttribute:(NSString *)attribute {
@@ -115,20 +130,31 @@ static NSMutableDictionary *existingClassPropertiesMap;
     return existingClassPropertiesMap;
 }
 
++ (SOCPrimitiveType)primitiveTypesMapForCharacter:(NSString *)character {
+    NSNumber *type = [self primitiveTypesMap][character];
+    if (type) {
+        return (SOCPrimitiveType) type.integerValue;
+    }
+    return SOCPrimitiveTypeUnknown;
+}
+
 + (NSDictionary *)primitiveTypesMap {
-    return @{@"c" : @(SOCPrimitiveTypeChar),
-            @"C" : @(SOCPrimitiveTypeUChar),
-            @"B" : @(SOCPrimitiveTypeBool),
-            @"i" : @(SOCPrimitiveTypeInt),
-            @"I" : @(SOCPrimitiveTypeUInt),
-            @"l" : @(SOCPrimitiveTypeLong),
-            @"L" : @(SOCPrimitiveTypeULong),
-            @"q" : @(SOCPrimitiveTypeLongLong),
-            @"Q" : @(SOCPrimitiveTypeULongLong),
-            @"d" : @(SOCPrimitiveTypeDouble),
-            @"f" : @(SOCPrimitiveTypeFloat),
-            @"s" : @(SOCPrimitiveTypeShort),
-            @"S" : @(SOCPrimitiveTypeUShort)};
+    if (internalPrimitiveTypesMap == nil) {
+        internalPrimitiveTypesMap = @{@"c" : @(SOCPrimitiveTypeChar),
+                @"C" : @(SOCPrimitiveTypeUChar),
+                @"B" : @(SOCPrimitiveTypeBool),
+                @"i" : @(SOCPrimitiveTypeInt),
+                @"I" : @(SOCPrimitiveTypeUInt),
+                @"l" : @(SOCPrimitiveTypeLong),
+                @"L" : @(SOCPrimitiveTypeULong),
+                @"q" : @(SOCPrimitiveTypeLongLong),
+                @"Q" : @(SOCPrimitiveTypeULongLong),
+                @"d" : @(SOCPrimitiveTypeDouble),
+                @"f" : @(SOCPrimitiveTypeFloat),
+                @"s" : @(SOCPrimitiveTypeShort),
+                @"S" : @(SOCPrimitiveTypeUShort)};
+    }
+    return internalPrimitiveTypesMap;
 }
 
 + (NSString *)iVarName:(NSArray *)attributes {

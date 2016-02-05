@@ -2,13 +2,15 @@
 
 @interface NSString (SOCExtension)
 
++ (instancetype)stringWithUnichar:(unichar)aChar;
+
 + (NSString *)UUIDString;
 
 - (NSString *)leftPadWith:(NSString *)padding toLength:(NSUInteger)finalLength;
 
 - (NSString *)rightPadWith:(NSString *)padding toLength:(NSUInteger)finalLength;
 
-- (NSString *)trim;
+- (instancetype)trim;
 
 - (NSURL *)toURL;
 
@@ -33,5 +35,7 @@
 - (NSString *)replace:(NSString *)target with:(NSString *)replacement;
 
 - (BOOL)matchesRegex:(NSString *)regex;
+
+- (void)forEachCharacter:(void (^)(NSString *))pFunction;
 
 @end

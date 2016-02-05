@@ -16,12 +16,10 @@
     NSArray *properties = [SOCObjectProperties getClassProperties:[SOCSampleObject class]];
     NSArray *parentProperties = [SOCObjectProperties getClassProperties:[SOCSampleParent class]];
     for (SOCProperty *aProperty in properties) {
-        if (!aProperty.isReadOnly && aProperty.propertyType == SOCPropertyTypeObject) {
-            if (aProperty.objectClass == NSString.class) {
-                [aProperty setValueTo:@"HAHAHAHA" onObject:[NSMutableString new]];
-                NSString *newValue = [aProperty getValueFrom:[NSArray new]];
-                NSLog(@"Value is now: %@", newValue);
-            }
+        if (!aProperty.isReadOnly && aProperty.propertyType == SOCPropertyTypePrimitive && aProperty.primitiveType == SOCPrimitiveTypeChar) {
+            [aProperty setValueTo:@YES onObject:sampleObject];
+            BOOL valueNowIs = [[aProperty getValueFrom:sampleObject] boolValue];
+            NSLog(@"Do we have something? %uC", valueNowIs);
         }
     }
     NSLog(@"Got properties %@, %@, %@", properties, sampleObject, parentProperties);

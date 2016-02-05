@@ -30,14 +30,7 @@
 }
 
 - (id)getValueFrom:(id)object {
-    SEL getSelector = [self getter];
-    if ([object respondsToSelector:getSelector]) {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        return [object performSelector:getSelector];
-#pragma clang diagnostic pop
-    }
-    return nil;
+    return [object valueForKey:self.name];
 }
 
 @end

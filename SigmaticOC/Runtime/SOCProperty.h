@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, SOCPrimitiveType) {
 @property(nonatomic) SOCPrimitiveType primitiveType;
 
 @property(nonatomic) NSString *structName;
+@property(nonatomic) NSArray *structDefinition;
 
 @property(nonatomic) NSArray *protocols;
 
@@ -61,4 +62,5 @@ typedef NS_ENUM(NSInteger, SOCPrimitiveType) {
 - (BOOL)setValueTo:(id)newValue onObject:(id)object;
 
 - (id)getValueFrom:(id)object;
+
 @end

@@ -3,6 +3,10 @@
 
 @implementation NSString (SOCExtension)
 
++ (instancetype)stringWithUnichar:(unichar)aChar {
+    return [self stringWithFormat:@"%C", aChar];
+}
+
 + (NSString *)UUIDString {
     return [[NSUUID UUID] UUIDString];
 }
@@ -35,7 +39,7 @@
     return string;
 }
 
-- (NSString *)trim {
+- (instancetype)trim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
@@ -120,6 +124,18 @@
 - (BOOL)matchesRegex:(NSString *)regex {
     NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     return [myTest evaluateWithObject:self];
+}
+
+- (void)forEachCharacter:(void (^)(NSString *))block {
+    unsigned int len = [self length];
+    unichar buffer[len];
+    [self getCharacters:buffer range:NSMakeRange(0, len)];
+
+    for(int i = 0; i < len; ++i) {
+        unichar character = buffer[i];
+        NSString *asString = [NSString stringWithUnichar:character];
+        block(asString);
+    }
 }
 
 @end
