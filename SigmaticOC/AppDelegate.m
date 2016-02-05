@@ -13,18 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    SOCSampleObject *sampleObject = [SOCSampleObject new];
-    NSArray *properties = [SOCObjectProperties getPropertiesForClass:[SOCSampleObject class] limitWithPrefix:@"SOC"];
-    NSArray *parentProperties = [SOCObjectProperties getPropertiesForClass:[SOCSampleParent class] limitWithPrefix:@"SOC"];
-    for (SOCProperty *aProperty in properties) {
-        if (!aProperty.isReadOnly && aProperty.propertyType == SOCPropertyTypePrimitive && aProperty.primitiveType == SOCPrimitiveTypeChar) {
-            [aProperty setValueTo:@YES onObject:sampleObject];
-            BOOL valueNowIs = [[aProperty getValueFrom:sampleObject] boolValue];
-            NSLog(@"Do we have something? %uC", valueNowIs);
-        }
-    }
-    NSArray *viewControllerProp = [SOCObjectProperties getPropertiesForClass:[SOCTestController class] limitWithPrefix:@"SOC"];
-    NSLog(@"Got properties %@, %@, %@, %@", properties, sampleObject, parentProperties, viewControllerProp);
     return YES;
 }
 

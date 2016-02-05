@@ -127,7 +127,7 @@
 }
 
 - (void)forEachCharacter:(void (^)(NSString *))block {
-    unsigned int len = [self length];
+    NSUInteger len = [self length];
     unichar buffer[len];
     [self getCharacters:buffer range:NSMakeRange(0, len)];
 
