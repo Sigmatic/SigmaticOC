@@ -11,8 +11,8 @@
 
 @property(nonatomic, setter=setTheCustomSetterBool:) BOOL customSetterBool;
 @property(nonatomic, weak) NSString *normalString;
-@property(nonatomic, assign, nonnull) NSMutableString *mutableString;
-@property(nonatomic, strong, nullable) id <UIAlertViewDelegate, UIApplicationDelegate, UITextFieldDelegate> delegates;
+@property(nonatomic, assign) NSMutableString *mutableString;
+@property(nonatomic, strong) id <UIAlertViewDelegate, UIApplicationDelegate, UITextFieldDelegate> delegates;
 
 
 @end
