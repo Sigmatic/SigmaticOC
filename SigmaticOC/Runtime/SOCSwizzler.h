@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface SOCMethodSwizzler : NSObject
+@interface SOCSwizzler : NSObject
 
 + (void)swizzleSelector:(SEL)originalSelector withSelector:(SEL)swizzledSelector inClass:(Class)aClass;
 

@@ -2,5 +2,8 @@
 
 @interface SOCObjectProperties : NSObject
 
-+ (NSArray *)getClassProperties:(Class)aClass;
++ (NSArray *)getPropertiesForClass:(Class)aClass;
+
++ (NSArray *)getPropertiesForClass:(Class)aClass limitWithPrefix:(NSString *)prefix;
+
 @end

@@ -10,7 +10,8 @@
 		80DA606F319A778198D586D2 /* SOCObjectProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */; };
 		80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA68E2735972185196F350 /* SOCSampleParent.m */; };
 		80DA669112E21605604294EF /* SOCProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA644E96E25F8999B397CF /* SOCProperty.m */; };
-		80DA68D88999DEC8121610F6 /* SOCMethodSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */; };
+		80DA68D88999DEC8121610F6 /* SOCSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA63311780E356FB6AEEB6 /* SOCSwizzler.m */; };
+		80DA6F1E0FD80FB0C0754A8F /* SOCObjectDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA680D3947DA1D7D0B09DF /* SOCObjectDescriptor.m */; };
 		80DA6F677B867C947A3330E1 /* SOCTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA65F033A316130657D75E /* SOCTestController.m */; };
 		80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DA6DE7FDBA249C5DAF3ABD /* SOCSampleObject.m */; };
 		B7757027EFDEB88D6BC4127B /* SOCStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B77579AE23214291E7CD1B35 /* SOCStringExtension.m */; };
@@ -40,6 +41,7 @@
 		D51FD4211B42870D00BC5BFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D51FD41F1B42870D00BC5BFA /* Main.storyboard */; };
 		D51FD4261B42870D00BC5BFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51FD4241B42870D00BC5BFA /* LaunchScreen.xib */; };
 		D567E57E1C64012E00CF3684 /* SOCProtocolUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */; };
+		D59587141C64A00E00FAFF18 /* SOCObjectPropertiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D59587131C64A00E00FAFF18 /* SOCObjectPropertiesTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +57,13 @@
 /* Begin PBXFileReference section */
 		80DA6088B445F8173CD59D9E /* SOCProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProperty.h; sourceTree = "<group>"; };
 		80DA6110DD4ACB9C76C4020B /* SOCTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCTestController.h; sourceTree = "<group>"; };
-		80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCMethodSwizzler.m; sourceTree = "<group>"; };
+		80DA62AC50F37F5886FB7C5D /* SOCObjectDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCObjectDescriptor.h; sourceTree = "<group>"; };
+		80DA63311780E356FB6AEEB6 /* SOCSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCSwizzler.m; sourceTree = "<group>"; };
 		80DA644E96E25F8999B397CF /* SOCProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProperty.m; sourceTree = "<group>"; };
-		80DA64E8BD7CA9BB1B13C57A /* SOCMethodSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCMethodSwizzler.h; sourceTree = "<group>"; };
+		80DA64E8BD7CA9BB1B13C57A /* SOCSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCSwizzler.h; sourceTree = "<group>"; };
 		80DA65F033A316130657D75E /* SOCTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCTestController.m; sourceTree = "<group>"; };
 		80DA671B24B1517DF6C0A193 /* SOCObjectProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCObjectProperties.h; sourceTree = "<group>"; };
+		80DA680D3947DA1D7D0B09DF /* SOCObjectDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCObjectDescriptor.m; sourceTree = "<group>"; };
 		80DA68E2735972185196F350 /* SOCSampleParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCSampleParent.m; sourceTree = "<group>"; };
 		80DA6A85A0ED741FBF09DE8B /* SOCSampleObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCSampleObject.h; sourceTree = "<group>"; };
 		80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCObjectProperties.m; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		D51FD4301B42870D00BC5BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D567E57C1C64012E00CF3684 /* SOCProtocolUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOCProtocolUtils.h; sourceTree = "<group>"; };
 		D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCProtocolUtils.m; sourceTree = "<group>"; };
+		D59587131C64A00E00FAFF18 /* SOCObjectPropertiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOCObjectPropertiesTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +148,22 @@
 			children = (
 				D567E57C1C64012E00CF3684 /* SOCProtocolUtils.h */,
 				D567E57D1C64012E00CF3684 /* SOCProtocolUtils.m */,
-				80DA63311780E356FB6AEEB6 /* SOCMethodSwizzler.m */,
-				80DA64E8BD7CA9BB1B13C57A /* SOCMethodSwizzler.h */,
+				80DA63311780E356FB6AEEB6 /* SOCSwizzler.m */,
+				80DA64E8BD7CA9BB1B13C57A /* SOCSwizzler.h */,
 				80DA6A9CF8BB7AE2FE388EBE /* SOCObjectProperties.m */,
 				80DA671B24B1517DF6C0A193 /* SOCObjectProperties.h */,
 				80DA644E96E25F8999B397CF /* SOCProperty.m */,
 				80DA6088B445F8173CD59D9E /* SOCProperty.h */,
+				80DA680D3947DA1D7D0B09DF /* SOCObjectDescriptor.m */,
+				80DA62AC50F37F5886FB7C5D /* SOCObjectDescriptor.h */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		80DA67AF5469279B5E697A7A /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				D59587131C64A00E00FAFF18 /* SOCObjectPropertiesTests.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -273,18 +288,18 @@
 			children = (
 				D51FD4191B42870D00BC5BFA /* AppDelegate.h */,
 				D51FD41A1B42870D00BC5BFA /* AppDelegate.m */,
-				D51FD41F1B42870D00BC5BFA /* Main.storyboard */,
-				D51FD4241B42870D00BC5BFA /* LaunchScreen.xib */,
-				D51FD4151B42870D00BC5BFA /* Supporting Files */,
 				B7757D7762E7171640750220 /* Array */,
-				B7757F8D469787C2571222FA /* String */,
-				B77573B7C16A8363A187133C /* Number */,
+				B77579A67646D54CE58E1820 /* Bool */,
 				B77572B1922A8F59F55AB26B /* Date */,
 				B77577E65559757CBB012D1F /* Dictionary */,
-				B77579A67646D54CE58E1820 /* Bool */,
 				B775789295E78BE38EB05E88 /* JSON */,
-				B775779B6EBF615A461F0916 /* SigmaticOC.h */,
+				D51FD4241B42870D00BC5BFA /* LaunchScreen.xib */,
+				D51FD41F1B42870D00BC5BFA /* Main.storyboard */,
+				B77573B7C16A8363A187133C /* Number */,
 				80DA626E00FD7DEC4EA07CCF /* Runtime */,
+				B775779B6EBF615A461F0916 /* SigmaticOC.h */,
+				B7757F8D469787C2571222FA /* String */,
+				D51FD4151B42870D00BC5BFA /* Supporting Files */,
 			);
 			path = SigmaticOC;
 			sourceTree = "<group>";
@@ -309,6 +324,7 @@
 			children = (
 				D51FD42F1B42870D00BC5BFA /* Supporting Files */,
 				B7757DFB5E426ACDFDC0279E /* Array */,
+				80DA67AF5469279B5E697A7A /* Runtime */,
 			);
 			path = SigmaticOCTests;
 			sourceTree = "<group>";
@@ -443,12 +459,13 @@
 				B77574CD9240381277BD0568 /* SOCNumberMultiples.m in Sources */,
 				B77573D411AE603F02DB9161 /* SOCDigitalStorageUnits.m in Sources */,
 				D567E57E1C64012E00CF3684 /* SOCProtocolUtils.m in Sources */,
-				80DA68D88999DEC8121610F6 /* SOCMethodSwizzler.m in Sources */,
+				80DA68D88999DEC8121610F6 /* SOCSwizzler.m in Sources */,
 				80DA606F319A778198D586D2 /* SOCObjectProperties.m in Sources */,
 				80DA669112E21605604294EF /* SOCProperty.m in Sources */,
 				80DA6F7BEF6E777B2665E0E4 /* SOCSampleObject.m in Sources */,
 				80DA60CDBCEB4916A1A3B4D3 /* SOCSampleParent.m in Sources */,
 				80DA6F677B867C947A3330E1 /* SOCTestController.m in Sources */,
+				80DA6F1E0FD80FB0C0754A8F /* SOCObjectDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7757EC3B46BDBFADF4D48B4 /* SOCArrayExtensionTests.m in Sources */,
+				D59587141C64A00E00FAFF18 /* SOCObjectPropertiesTests.m in Sources */,
 				B7757FE090DB1791B760207B /* SOCArrayUtilsTests.m in Sources */,
 				B77578A1E5244D9966F44958 /* SOCMutableArrayExtensionTests.m in Sources */,
 			);

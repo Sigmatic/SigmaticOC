@@ -1,8 +1,8 @@
-#import "SOCMethodSwizzler.h"
+#import "SOCSwizzler.h"
 #import <objc/runtime.h>
 
 
-@implementation SOCMethodSwizzler
+@implementation SOCSwizzler
 
 + (void)swizzleSelector:(SEL)originalSelector withSelector:(SEL)swizzledSelector inClass:(Class)aClass {
     Method originalMethod = class_getInstanceMethod(aClass, originalSelector);

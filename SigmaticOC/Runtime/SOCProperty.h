@@ -59,6 +59,8 @@ typedef NS_ENUM(NSInteger, SOCPrimitiveType) {
 @property(nonatomic) NSString *customSetter;
 @property(nonatomic, readonly) SEL setter;
 
+@property(nonatomic) Class sourceClass;
+
 - (BOOL)setValueTo:(id)newValue onObject:(id)object;
 
 - (id)getValueFrom:(id)object;

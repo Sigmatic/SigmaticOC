@@ -4,23 +4,26 @@
 #import "SOCMutableArrayExtension.h"
 #import <objc/runtime.h>
 
-static NSMutableDictionary *existingClassPropertiesMap;
 static NSDictionary *internalPrimitiveTypesMap;
 
 @implementation SOCObjectProperties
 
++ (NSArray *)getPropertiesForClass:(Class)aClass {
+    return [self getPropertiesForClass:aClass limitWithPrefix:nil];
+}
 
-+ (NSArray *)getClassProperties:(Class)aClass {
-    if (aClass == [NSObject class]) {
-        return [NSArray new];
++ (NSArray *)getPropertiesForClass:(Class)aClass limitWithPrefix:(NSString *)prefix {
+    if (aClass == nil) {
+        return @[];
     }
-    NSString *className = NSStringFromClass(aClass);
-    NSArray *existingProperties = [self classPropertiesMap][className];
-    if (existingProperties == nil) {
-        existingProperties = [self generatePropertiesForClass:aClass];
-        [self classPropertiesMap][className] = existingProperties;
+    NSArray *thisClassProperties = [self generatePropertiesForClass:aClass];
+    Class classSuperclass = [aClass superclass];
+    NSString *classSuperclassString = NSStringFromClass(classSuperclass);
+    if (prefix == nil || [classSuperclassString hasPrefix:prefix]) {
+        NSArray *superclassProperties = [self getPropertiesForClass:classSuperclass limitWithPrefix:prefix];
+        return [thisClassProperties arrayByAddingObjectsFromArray:superclassProperties];
     }
-    return existingProperties;
+    return thisClassProperties;
 }
 
 + (NSArray *)generatePropertiesForClass:(Class)aClass {
@@ -30,6 +33,7 @@ static NSDictionary *internalPrimitiveTypesMap;
     for (unsigned int i = 0; i < propertyCount; i++) {
         objc_property_t property = properties[i];
         SOCProperty *newProperty = [[SOCProperty alloc] init];
+        newProperty.sourceClass = aClass;
         const char *propertyName = property_getName(property);
         newProperty.name = @(propertyName);
         const char *cAttributes = property_getAttributes(property);
@@ -59,8 +63,7 @@ static NSDictionary *internalPrimitiveTypesMap;
         [allProperties addObject:newProperty];
     }
     free(properties);
-    NSArray *superclassProperties = [self getClassProperties:[aClass superclass]];
-    return [allProperties arrayByAddingObjectsFromArray:superclassProperties];
+    return allProperties;
 }
 
 + (SOCPrimitiveType)primitiveTypeFromTypeAttribute:(NSString *)attribute {
@@ -70,6 +73,9 @@ static NSDictionary *internalPrimitiveTypesMap;
 
 + (NSString *)structNameFromTypeAttribute:(NSString *)attribute {
     NSString *structNameBegin = [attribute substringFromIndex:2];
+    if (structNameBegin == nil) {
+        return nil;
+    }
     NSScanner *scanner = [NSScanner scannerWithString:structNameBegin];
     NSString *structName = nil;
     [scanner scanCharactersFromSet:[NSCharacterSet alphanumericCharacterSet]
@@ -78,6 +84,9 @@ static NSDictionary *internalPrimitiveTypesMap;
 }
 
 + (NSArray *)structDefinitionsFromTypeAttribute:(NSString *)attribute {
+    if (attribute == nil) {
+        return nil;
+    }
     NSScanner *scanner = [NSScanner scannerWithString:attribute];
     [scanner scanUpToString:@"=" intoString:NULL];
     [scanner scanString:@"=" intoString:NULL];
@@ -92,6 +101,9 @@ static NSDictionary *internalPrimitiveTypesMap;
 
 + (NSArray *)protocolsFromTypeAttribute:(NSString *)attribute {
     NSString *classNameAndProtocols = [self extractClassNameAndProtocolsString:attribute];
+    if (classNameAndProtocols == nil) {
+        return nil;
+    }
     NSScanner *scanner = [NSScanner scannerWithString:classNameAndProtocols];
     NSMutableArray *protocols = [NSMutableArray new];
     while ([scanner scanString:@"<" intoString:NULL]) {
@@ -105,15 +117,21 @@ static NSDictionary *internalPrimitiveTypesMap;
 
 + (NSString *)classNameFromTypeAttribute:(NSString *)attribute {
     NSString *classNameAndProtocols = [self extractClassNameAndProtocolsString:attribute];
+    if (classNameAndProtocols == nil) {
+        return nil;
+    }
     NSScanner *scanner = [NSScanner scannerWithString:classNameAndProtocols];
+    [scanner scanString:@"\"" intoString:NULL];
     NSString *className = nil;
     [scanner scanUpToCharactersFromSet:[NSCharacterSet characterSetWithCharactersInString:@"\"<"] intoString:&className];
     return className;
 }
 
 + (NSString *)extractClassNameAndProtocolsString:(NSString *)attribute {
-    NSString *classNameAndProtocols = [attribute substringFromIndex:3];
-    return classNameAndProtocols;
+    if (attribute.length > 2) {
+        return [attribute substringFromIndex:2];
+    }
+    return nil;
 }
 
 + (BOOL)isMutableProperty:(NSString *)propertyType {
@@ -122,13 +140,6 @@ static NSDictionary *internalPrimitiveTypesMap;
 
 + (BOOL)isPropertyReadOnly:(NSArray *)attributes {
     return [attributes containsObject:@"R"];
-}
-
-+ (NSMutableDictionary *)classPropertiesMap {
-    if (existingClassPropertiesMap == nil) {
-        existingClassPropertiesMap = [NSMutableDictionary new];
-    }
-    return existingClassPropertiesMap;
 }
 
 + (SOCPrimitiveType)primitiveTypesMapForCharacter:(NSString *)character {
