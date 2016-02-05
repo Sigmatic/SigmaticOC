@@ -17,11 +17,6 @@
     [super tearDown];
 }
 
-- (void)testPerformanceOfViewControllerProperties {
-    [self measureBlock:^{
-        NSArray *propertiesForClass = [SOCObjectProperties getPropertiesForClass:[SOCTestController class]];
-        NSLog(@"Got properties, %@", @(propertiesForClass.count));
-    }];
-}
+
 
 @end
