@@ -5,6 +5,8 @@
  */
 @interface SOCWeakArray : NSObject
 
+
+
 ///------------------------------------
 /// @name Instantiation
 ///------------------------------------
@@ -17,6 +19,8 @@
  */
 + (instancetype)arrayWithForcedProtocol:(Protocol *)aProtocol;
 
+
+
 ///------------------------------------
 /// @name Properties
 ///------------------------------------
@@ -25,6 +29,8 @@
  Objects that are still in memory and have not been released.
  */
 @property(nonatomic, readonly) NSArray *remainingObjects;
+
+
 
 ///------------------------------------
 /// @name Objects Addition
@@ -61,6 +67,8 @@
  */
 - (void)removeAllObjects;
 
+
+
 ///------------------------------------
 /// @name Matching
 ///------------------------------------
@@ -71,6 +79,8 @@
  @param object The object to check for.
  */
 - (BOOL)containsObject:(id)object;
+
+
 
 ///------------------------------------
 /// @name House Keeping

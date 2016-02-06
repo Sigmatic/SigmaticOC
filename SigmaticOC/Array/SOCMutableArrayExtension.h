@@ -5,6 +5,8 @@
  */
 @interface NSMutableArray (SOCExtension)
 
+
+
 ///-----------------------
 /// @name Objects Removal
 ///-----------------------
@@ -22,6 +24,8 @@
  @param aClass The class to keep.
  */
 - (void)removeObjectsNotWithClass:(Class)aClass;
+
+
 
 ///-----------------------
 /// @name Objects Addition

@@ -5,6 +5,8 @@
  */
 @interface SOCArrayUtils : NSObject
 
+
+
 ///-----------------------
 /// @name Arrays Matching
 ///-----------------------
@@ -26,6 +28,8 @@
  @return An array with objects only occurring in the first array.
  */
 + (NSArray *)objectsIn:(NSArray *)firstArray butNotIn:(NSArray *)secondArray;
+
+
 
 ///-----------------------
 /// @name Easy Access

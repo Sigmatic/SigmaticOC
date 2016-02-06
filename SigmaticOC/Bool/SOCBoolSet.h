@@ -5,6 +5,8 @@
  */
 @interface SOCBoolSet : NSObject
 
+
+
 ///------------------------------------
 /// @name Instantiation
 ///------------------------------------
@@ -46,6 +48,8 @@
  */
 + (instancetype)oneZeroSet;
 
+
+
 ///------------------------------------
 /// @name Properties
 ///------------------------------------
@@ -59,6 +63,7 @@
  False string to match.
  */
 @property(nonatomic) NSString *falseString;
+
 
 
 ///------------------------------------

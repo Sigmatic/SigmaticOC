@@ -8,7 +8,7 @@ const NSUInteger SECONDS_IN_MINUTE = 60;
 const NSUInteger SECONDS_IN_HOUR = 3600;
 const NSUInteger SECONDS_IN_DAY = 86400;
 const NSUInteger SECONDS_IN_WEEK = 604800;
-const NSUInteger SECONDS_IN_YEAR = 31556940;
+const NSUInteger SECONDS_IN_YEAR_ESTIMATE = 31556940;
 
 @implementation SOCDateUtils
 
@@ -34,6 +34,27 @@ const NSUInteger SECONDS_IN_YEAR = 31556940;
 
 + (BOOL)isToday:(NSDate *)date inTimeZone:(NSTimeZone *)timeZone {
     return [self isDayInSameDay:date asDate:[NSDate date] inTimeZone:timeZone];
+}
+
++ (BOOL)isDayInSameDay:(NSDate *)date asDate:(NSDate *)otherDate {
+    return [self isDayInSameDay:date asDate:otherDate inTimeZone:[NSTimeZone localTimeZone]];
+}
+
++ (BOOL)isDayInSameDay:(NSDate *)date asDate:(NSDate *)otherDate inTimeZone:(NSTimeZone *)timeZone {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    calendar.timeZone = timeZone;
+    NSCalendarUnit calendarUnits = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSDateComponents *components = [calendar components:calendarUnits fromDate:date];
+    components.timeZone = timeZone;
+    NSDateComponents *dateComponents = [calendar components:calendarUnits fromDate:otherDate];
+    dateComponents.timeZone = timeZone;
+    if (components.year != dateComponents.year) {
+        return NO;
+    }
+    if (components.month != dateComponents.month) {
+        return NO;
+    }
+    return components.day == dateComponents.day;
 }
 
 + (NSDate *)startOfDay:(NSDate *)date {
@@ -64,36 +85,6 @@ const NSUInteger SECONDS_IN_YEAR = 31556940;
     components.second = 59;
     NSDate *endDate = [calendar dateFromComponents:components];
     return endDate;
-}
-
-+ (BOOL)isDayInSameDay:(NSDate *)date asDate:(NSDate *)otherDate {
-    return [self isDayInSameDay:date asDate:otherDate inTimeZone:[NSTimeZone localTimeZone]];
-}
-
-+ (BOOL)isDayInSameDay:(NSDate *)date asDate:(NSDate *)otherDate inTimeZone:(NSTimeZone *)timeZone {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    calendar.timeZone = timeZone;
-    NSCalendarUnit calendarUnits = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
-    NSDateComponents *components = [calendar components:calendarUnits fromDate:date];
-    components.timeZone = timeZone;
-    NSDateComponents *dateComponents = [calendar components:calendarUnits fromDate:otherDate];
-    dateComponents.timeZone = timeZone;
-    if (components.year != dateComponents.year) {
-        return NO;
-    }
-    if (components.month != dateComponents.month) {
-        return NO;
-    }
-    return components.day == dateComponents.day;
-}
-
-+ (NSDate *)dateWithoutTime:(NSDate *)date {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    calendar.timeZone = [NSTimeZone localTimeZone];
-    NSCalendarUnit calendarUnits = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:calendarUnits fromDate:date];
-    components.timeZone = [NSTimeZone localTimeZone];
-    return [calendar dateFromComponents:components];
 }
 
 @end

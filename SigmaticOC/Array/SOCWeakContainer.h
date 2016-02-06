@@ -5,6 +5,8 @@
  */
 @interface SOCWeakContainer : NSObject
 
+
+
 ///------------------------------------
 /// @name Instantiation
 ///------------------------------------
@@ -16,6 +18,8 @@
  @return The new weak container instance.
  */
 + (instancetype)containerWithObject:(id)object;
+
+
 
 ///------------------------------------
 /// @name Properties

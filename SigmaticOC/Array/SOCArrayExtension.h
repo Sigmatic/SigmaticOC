@@ -6,6 +6,7 @@
 @interface NSArray (SOCExtension)
 
 
+
 ///------------------------------------
 /// @name Properties
 ///------------------------------------
@@ -14,6 +15,8 @@
  Is of type NSMutableArray.
  */
 @property(nonatomic, readonly) BOOL isMutable;
+
+
 
 ///-----------------------
 /// @name Filtering
@@ -43,6 +46,7 @@ Filters unique objects in an array. Using the [NSArray containsObject:] to test 
 - (instancetype)uniqueObjects;
 
 
+
 ///-----------------------
 /// @name Sorting
 ///-----------------------
@@ -62,6 +66,7 @@ Filters unique objects in an array. Using the [NSArray containsObject:] to test 
  @return An array with the same NSArray class (or subclass) with the sorted items.
  */
 - (instancetype)reverseArray;
+
 
 
 ///-----------------------

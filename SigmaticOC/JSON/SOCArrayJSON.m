@@ -6,7 +6,7 @@
 
 + (instancetype)fromJSON:(NSString *)json {
     id hopefullyArray = [SOCJSONUtils jsonToObject:json options:[self jsonOptionForMutability]];
-    if (![hopefullyArray isKindOfClass:[NSDictionary class]]) {
+    if (![hopefullyArray isKindOfClass:[NSArray class]]) {
         NSString *reason = [NSString stringWithFormat:@"Requested data of type %@, but was %@",
                                                       NSStringFromClass([self class]), NSStringFromClass([hopefullyArray class])];
         NSException *e = [NSException exceptionWithName:@"SOCWrongJSONDataType" reason:reason userInfo:nil];
