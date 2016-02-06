@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 
+/**
+ The `NSString SOCExtension` extension provides convenient string instantiation and manipulation.
+ */
 @interface NSString (SOCExtension)
 
 + (instancetype)stringWithUnichar:(unichar)aChar;

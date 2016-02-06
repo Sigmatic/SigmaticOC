@@ -52,7 +52,6 @@ static NSDictionary *internalPrimitiveTypesMap;
         if (newProperty.propertyType == SOCPropertyTypeObject) {
             NSString *className = [self classNameFromTypeAttribute:typeAttribute];
             newProperty.objectClass = NSClassFromString(className);
-            newProperty.isMutable = [self isMutableProperty:className];
             newProperty.protocols = [self protocolsFromTypeAttribute:typeAttribute];
         } else if (newProperty.propertyType == SOCPropertyTypeStruct) {
             newProperty.structName = [self structNameFromTypeAttribute:typeAttribute];
@@ -132,10 +131,6 @@ static NSDictionary *internalPrimitiveTypesMap;
         return [attribute substringFromIndex:2];
     }
     return nil;
-}
-
-+ (BOOL)isMutableProperty:(NSString *)propertyType {
-    return [propertyType contains:@"Mutable"];
 }
 
 + (BOOL)isPropertyReadOnly:(NSArray *)attributes {

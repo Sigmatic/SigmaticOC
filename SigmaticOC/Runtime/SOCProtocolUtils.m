@@ -24,9 +24,9 @@
     return conformingClasses;
 }
 
-+ (BOOL)isObject:(id)object conformingToProtocols:(NSArray *)protocols {
++ (BOOL)isClass:(Class)aClass conformingToProtocols:(NSArray *)protocols {
     for (Protocol *aProtocol in protocols) {
-        if (![object conformsToProtocol:aProtocol]) {
+        if (![aClass conformsToProtocol:aProtocol]) {
             return NO;
         }
     }

@@ -1,5 +1,8 @@
 #import <Foundation/Foundation.h>
 
+/**
+ Enum for number multiples
+ */
 typedef NS_ENUM(NSUInteger, SOCNumberMultiple) {
     SOCMultiplesBase = 1,
     SOCMultipleKilo = 2,
