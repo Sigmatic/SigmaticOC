@@ -42,7 +42,7 @@
 
 - (void)addObject:(id)object {
     [self checkObject:object];
-    SOCWeakContainer *container = [SOCWeakContainer new];
+    SOCWeakContainer *container = [SOCWeakContainer containerWithObject:object];
     [self.containersArray addObject:container];
 }
 
@@ -90,7 +90,7 @@
     if (self.aProtocol) {
         if (![object conformsToProtocol:self.aProtocol]) {
             NSString *reason = [NSString stringWithFormat:@"Object <%@> does not conform to enforced protocol <%@>", NSStringFromClass([object class]), NSStringFromProtocol(self.aProtocol)];
-            NSException *exception = [[NSException alloc] initWithName:@"SOCNotConformingToProcotol" reason:reason userInfo:@{
+            NSException *exception = [[NSException alloc] initWithName:@"SOCNotConformingToProtocol" reason:reason userInfo:@{
                     NSLocalizedDescriptionKey : reason
             }];
             @throw exception;

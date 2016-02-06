@@ -40,6 +40,7 @@
  Add an object and weakly reference it in the array.
 
  @param object The object to add.
+ @raise SOCNotConformingToProtocol Raised if the object does not conform to the enforced protocol.
  */
 - (void)addObject:(id)object;
 
@@ -47,6 +48,7 @@
  Add an array of objects and weakly reference them in the array.
 
  @param objects The array of objects to add.
+ @raise SOCNotConformingToProtocol Raised if an object does not conform to the enforced protocol.
  */
 - (void)addObjects:(NSArray *)objects;
 
