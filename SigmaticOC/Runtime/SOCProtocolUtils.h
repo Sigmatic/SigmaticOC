@@ -5,4 +5,6 @@
 
 + (NSArray *)classesConformingToProtocol:(Protocol *)aProtocol;
 
++ (BOOL)isObject:(id)object conformingToProtocols:(NSArray *)protocols;
+
 @end

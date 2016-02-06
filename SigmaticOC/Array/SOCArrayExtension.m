@@ -1,8 +1,17 @@
 #import "SOCArrayExtension.h"
-#import "SOCIntegerUtils.h"
+#import "SOCIntUtils.h"
+#import "SOCMutableArrayExtension.h"
 
 
 @implementation NSArray (SOCExtension)
+
+#pragma mark - Properties
+
+- (BOOL)isMutable {
+    return [[self class] isKindOfClass:[NSMutableArray class]];
+}
+
+#pragma mark - Filtering
 
 - (instancetype)objectsWithClass:(Class)aClass {
     NSMutableArray *results = [NSMutableArray new];
@@ -24,23 +33,23 @@
     return [self.class arrayWithArray:results];
 }
 
+- (instancetype)uniqueObjects {
+    NSMutableArray *uniqueItems = [[NSMutableArray alloc] init];
+    for (id item in self) {
+        [uniqueItems addObjectIfNew:item];
+    }
+    return [self.class arrayWithArray:uniqueItems];
+}
+
+#pragma mark - Sorting
+
 - (instancetype)sortUsingIndicesArray:(NSArray *)indexArray {
     NSArray *sortedArray = [self sortedArrayUsingComparator:^NSComparisonResult(id class1, id class2) {
         NSUInteger index1 = [indexArray indexOfObject:class1];
         NSUInteger index2 = [indexArray indexOfObject:class2];
-        return [SOCIntegerUtils compare:index1 with:index2];
+        return [SOCIntUtils compare:index1 with:index2];
     }];
     return [self.class arrayWithArray:sortedArray];
-}
-
-- (instancetype)uniqueObjects {
-    NSMutableArray *uniqueItems = [[NSMutableArray alloc] init];
-    for (id item in self) {
-        if (![uniqueItems containsObject:item]) {
-            [uniqueItems addObject:item];
-        }
-    }
-    return [self.class arrayWithArray:uniqueItems];
 }
 
 - (instancetype)reverseArray {
@@ -51,13 +60,27 @@
     return [self.class arrayWithArray:reversedArray];
 }
 
+#pragma mark - Easy Access
+
 - (id)randomObject {
-    NSUInteger randomIndex = arc4random() % [self count];
-    return self[randomIndex];
+    if ([self count] > 0) {
+        return self[arc4random_uniform([self count])];
+    }
+    return nil;
 }
 
-- (BOOL)isMutable {
-    return [[self class] isKindOfClass:[NSMutableArray class]];
+- (id)secondObject {
+    if (self.count > 1) {
+        return self[1];
+    }
+    return nil;
+}
+
+- (id)secondLastObject {
+    if (self.count > 1) {
+        return self[self.count - 2];
+    }
+    return nil;
 }
 
 @end

@@ -5,7 +5,6 @@
 #import "SOCWeakContainer.h"
 
 #import "SOCBoolSet.h"
-#import "SOCBoolUtils.h"
 
 #import "SOCDateUtils.h"
 
@@ -18,10 +17,13 @@
 #import "SOCStringJSON.h"
 
 #import "SOCDigitalStorageUnits.h"
-#import "SOCIntegerUtils.h"
+#import "SOCIntUtils.h"
 #import "SOCNumberMultiples.h"
 
+#import "SOCObjectProperties.h"
+#import "SOCProperty.h"
 #import "SOCProtocolUtils.h"
+#import "SOCSwizzler.h"
 
 #import "SOCStringExtension.h"
 #import "SOCStringUtils.h"

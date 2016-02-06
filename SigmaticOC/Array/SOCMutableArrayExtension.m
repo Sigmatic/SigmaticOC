@@ -32,4 +32,12 @@
     }
 }
 
+- (void)toggleObject:(id)object {
+    if ([self containsObject:object]) {
+        [self removeObject:object];
+    } else {
+        [self addObject:object];
+    }
+}
+
 @end

@@ -1,9 +1,9 @@
-#import "SOCIntegerUtils.h"
+#import "SOCIntUtils.h"
 
 
-@implementation SOCIntegerUtils
+@implementation SOCIntUtils
 
-+ (NSUInteger)integerFromHexString:(NSString *)hexString {
++ (NSUInteger)intFromHexString:(NSString *)hexString {
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
     unsigned int value = 0;
     [scanner scanHexInt:&value];
@@ -29,5 +29,14 @@
         return NSOrderedAscending;
     }
 }
+
++ (NSUInteger)randomIntBetween:(NSUInteger)from and:(NSUInteger)to {
+    return arc4random_uniform(to) + from;
+}
+
++ (NSUInteger)randomInt {
+    return [self randomIntBetween:0 and:NSUIntegerMax];
+}
+
 
 @end

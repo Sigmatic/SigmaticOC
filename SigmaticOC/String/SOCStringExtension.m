@@ -138,4 +138,8 @@
     }
 }
 
+- (NSString *)characterAtIndexAsString:(NSUInteger)index {
+    return [NSString stringWithUnichar:[self characterAtIndex:index]];
+}
+
 @end

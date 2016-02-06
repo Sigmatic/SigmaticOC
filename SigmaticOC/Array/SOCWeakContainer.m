@@ -3,11 +3,15 @@
 
 @implementation SOCWeakContainer
 
+#pragma mark - Instantiation
+
 + (instancetype)containerWithObject:(id)object {
     SOCWeakContainer *container = [self new];
     [container setObject:object];
     return container;
 }
+
+#pragma mark - Equality Check
 
 - (BOOL)isEqual:(id)other {
     if (other == self) {

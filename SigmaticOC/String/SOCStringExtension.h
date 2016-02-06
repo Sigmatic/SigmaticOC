@@ -36,6 +36,8 @@
 
 - (BOOL)matchesRegex:(NSString *)regex;
 
-- (void)forEachCharacter:(void (^)(NSString *))pFunction;
+- (void)forEachCharacter:(void (^)(NSString *))block;
+
+- (NSString *)characterAtIndexAsString:(NSUInteger)index;
 
 @end

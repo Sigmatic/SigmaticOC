@@ -1,5 +1,6 @@
 #import "SOCWeakArray.h"
 #import "SOCWeakContainer.h"
+#import "SOCMutableArrayExtension.h"
 
 
 @interface SOCWeakArray ()
@@ -10,6 +11,8 @@
 @end
 
 @implementation SOCWeakArray
+
+#pragma mark - Instantiation
 
 + (instancetype)arrayWithForcedProtocol:(Protocol *)aProtocol {
     SOCWeakArray *weakArray = [self new];
@@ -25,6 +28,18 @@
     return self;
 }
 
+#pragma mark - Properties
+
+- (NSArray *)remainingObjects {
+    NSMutableArray *results = [NSMutableArray new];
+    for (SOCWeakContainer *container in self.containersArray) {
+        [results safeAddObject:container.object];
+    }
+    return [results copy];
+}
+
+#pragma mark - Objects Addition
+
 - (void)addObject:(id)object {
     [self checkObject:object];
     SOCWeakContainer *container = [SOCWeakContainer new];
@@ -36,6 +51,8 @@
         [self addObject:object];
     }
 }
+
+#pragma mark - Objects Removal
 
 - (void)removeObject:(id)object {
     NSMutableArray *containersToRemove = [NSMutableArray new];
@@ -51,14 +68,13 @@
     [self.containersArray removeAllObjects];
 }
 
+#pragma mark - Matching
+
 - (BOOL)containsObject:(id)object {
-    for (SOCWeakContainer *container in self.containersArray) {
-        if ([container.object isEqual:object]) {
-            return YES;
-        }
-    }
-    return NO;
+    return [self.remainingObjects containsObject:object];
 }
+
+#pragma mark - House Keeping
 
 - (void)clearReleased {
     NSMutableArray *containersToRemove = [NSMutableArray new];
@@ -68,16 +84,6 @@
         }
     }
     [self.containersArray removeObjectsInArray:containersToRemove];
-}
-
-- (NSArray *)remainingObjects {
-    NSMutableArray *results = [NSMutableArray new];
-    for (SOCWeakContainer *container in self.containersArray) {
-        if (container.object) {
-            [results addObject:container.object];
-        }
-    }
-    return [results copy];
 }
 
 - (void)checkObject:(id)object {
