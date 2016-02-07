@@ -31,7 +31,7 @@
 }
 
 + (NSUInteger)randomIntBetween:(NSUInteger)from and:(NSUInteger)to {
-    return arc4random_uniform(to) + from;
+    return arc4random_uniform((u_int32_t)to) + from;
 }
 
 + (NSUInteger)randomInt {
