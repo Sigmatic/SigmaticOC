@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SigmaticOC'
-  s.version  = '1.2'
+  s.version  = '1.3'
   s.license  = 'MIT'
   s.summary  = 'Buttersmooth Objective-C for the Brave'
   s.homepage = 'https://github.com/Sigmatic/SigmaticOC'
