@@ -105,6 +105,7 @@ static NSDictionary *internalPrimitiveTypesMap;
     }
     NSScanner *scanner = [NSScanner scannerWithString:classNameAndProtocols];
     NSMutableArray *protocols = [NSMutableArray new];
+    [scanner scanUpToString:@"<" intoString:NULL];
     while ([scanner scanString:@"<" intoString:NULL]) {
         NSString *protocolName = nil;
         [scanner scanUpToString:@">" intoString:&protocolName];
